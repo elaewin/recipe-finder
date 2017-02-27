@@ -1,6 +1,6 @@
 'use strict';
 
-function recipe(obj) {
+function Recipe(obj) {
   label: obj.label;
   image: obj.image;
   url: obj.url;
