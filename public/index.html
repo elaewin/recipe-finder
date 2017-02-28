@@ -22,17 +22,73 @@
       <img id="logo"src="./resources/foodiez-logo.png" alt="plate, fork, and knife logo image">
     </header>
     <main>
-      <p>Hey, we know you're busy. We are, too. That's why FoodiEz searches more than 1.5 million recipes to help you figure out what to make for dinner. Just answer a few quick questions for us, and we'll find exactly what you need.</p>
+      <section id="intro">
+        <p id="first-visit">Hey, we know you're busy. We are, too. That's why FoodiEz searches more than 1.5 million recipes to help you figure out what to make for dinner. Just answer a few quick questions for us, and we'll find exactly what you need.</p>
+        <p id="returning-visit">Welcome back! Would you like to use your existing preferences?</p>
+      </section>
+      <section id="health-and-diet-prompt">
+        <p>Do you have any health or dietary restrictions?</p>
+        <button>YES</button>
+        <button>NO</button>
+      </section>
+      <section id="health-and-diet">
+        <p>What are your health and diet restrictions?</p>
+        <p>Health Restrictions</p>
+          <form action="">
+            <input id="peanut-free" type="radio">
+            <input id="tree-nut-free" type="radio">
+            <input id="soy-free" type="radio">
+            <input id="fish-free" type="radio">
+            <input id="shellfish-free" type="radio">
+            <input id="vegan" type="radio">
+            <input id="vegetarian" type="radio">
+            <input id="paleo" type="radio">
+            <input id="dairy-free" type="radio">
+            <input id="gluten-free" type="radio">
+            <input id="wheat-free" type="radio">
+            <input id="fat-free" type="radio">
+            <input id="low-sugar" type="radio">
+            <input id="egg-free" type="radio">
+          </form>
+          <p>Diet Restrictions</p>
+          <form action="">
+            <input id="balanced" type="radio">
+            <input id="high-protein" type="radio">
+            <input id="high-fiber" type="radio">
+            <input id="low-fat" type="radio">
+            <input id="low-carb" type="radio">
+            <input id="low-sodium" type="radio">
+          </form>
+      </section>
+      <section id="keyword-prompt">
+        <p>What ingredients do you have on hand?</p>
+        <form action="">
+          <input id="" type="text">
+        </form>
+
+      </section>
+
+
+
       <article id="recipe">
         <!-- This is where our recipes will be. -->
       </article>
       <section id="about-us-view">
-        <img src="" alt="David Wheeler">
-        <img src="" alt="Disa Marnesdottr">
-        <img src="" alt="David Wheeler">
-        <img src="" alt="Ronel Rustia">
-
-        <p>Favicon and dinnerware icons created by <a href="http://www.freepik.com/">freepik</a> from < href="http://www.flaticon.com/">FLATICON.
+        <div class="round">
+          <img class="profile-pic" src="" alt="David Wheeler">
+        </div>
+        <!-- <div class="round">
+          <img class="profile-pic" src="./resources/DisaDots.jpg" alt="Disa Marnesdottr">
+        </div> -->
+        <div class="round">
+          <img class="profile-pic" src="" alt="Miguel Pena">
+        </div>
+        <div class="round">
+          <img class="profile-pic" src="" alt="Ronel Rustia">
+        </div>
+        <p>Favicon and dinnerware icons created by
+          <a href="http://www.freepik.com/">freepik</a> from
+          <a href="http://www.flaticon.com/">FLATICON</a>.
         </p>
       </section>
 
