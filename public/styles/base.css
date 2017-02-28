@@ -1,9 +1,27 @@
 body {
-  background-color: #141414;
   color: #ffaf70;
+  background: #141414;
   font-family: "Open Sans";
 }
 
 h1 {
   font-family: "Rock Salt";
+  font-size: 3vw;
+}
+
+header {
+  height: 8vw;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.icon {
+  height: 4vw;
+}
+
+.squeeze {
+  height: 60%;
+  width: auto;
 }
