@@ -17,7 +17,7 @@
 
   // assuming the resulting recipes will be put in an object with properties of 'name' and 'imageLink'
   recipeView.create = function() {
-    var recipe = localStorage.rawData;
+    var recipe = localStorage.rawData; // TODO we'll actually be getting recipe data from database and user profile from local storage
     $('#id').empty(); // this id belongs to the div that will contain the new result and empty it.
     recipe.forEach(r => $('#recipe').append(r.toHtml()); // this id belongs to the div that will contain the new result
     recipeView.initRecipePage();
