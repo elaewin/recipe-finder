@@ -2,6 +2,7 @@ body {
   color: #ffaf70;
   background: #141414;
   font-family: "Open Sans";
+  font-size: 1.2em;
 }
 
 h1 {
@@ -10,18 +11,12 @@ h1 {
 }
 
 header {
-  height: 8vw;
+  height: 12vw;
 }
 
-.logo {
-  display: inline-block;
-}
+#logo {
+  display: block;
+  height: 90%;
+  margin: auto;
 
-.icon {
-  height: 4vw;
-}
-
-.squeeze {
-  height: 60%;
-  width: auto;
 }
