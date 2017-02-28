@@ -10,4 +10,6 @@
     .then(callback)
   }
 
+  module.edamamDataController = edamamDataController;
+
 })(window);
