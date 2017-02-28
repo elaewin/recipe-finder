@@ -5,38 +5,37 @@ function Recipe(obj) {
   image: obj.image;
   url: obj.url;
 }
-//
-// recipe.all = [];
-//
-// recipe.prototype.toHtml = function() {
-//   var template = Handlebars.compile($('#recipe-template').text());
-//   this.body = marked(this.body);
-//   return template(this);
-// };
-//
-//
-// recipe.loadAll = rows => {
-//   recipe.all = rows.map(ele => new recipe(ele));
-// };
-//
-// recipe.fetchAll = callback => {
-//   $.get('/result')
-//   .then(
-//     results => {
-//       if (results.length) {
-//         recipe.loadAll(results);
-//         callback();
-//       } else {
-//         $.getJSON(localStorage.recipe)
-//         .then(rawData => {
-//           rawData.forEach(item => {
-//             let recipe = new recipe(item);
-//             recipe.insertRecord();
-//           })
-//         })
-//         .then(() => recipe.fetchAll(callback))
-//         .catch(console.error);
-//       }
-//     }
-//   )
-// };
+
+recipe.all = [];
+
+Recipe.loadAll = rows => {
+  recipe.all = rows.map(ele => new Recipe(ele));
+};
+
+Recipe.fetchAll = callback => {
+//TODO: fix foo data here
+  $.get('/foo')
+  .then(
+    results => {
+      if (results.length) {
+        recipe.loadAll(results);
+        callback();
+      } else {
+// TODO: fix this fall-back after we decide on a behaviour for this
+        // $.getJSON(localStorage.recipe)
+        // .then(rawData => {
+        //   rawData.forEach(item => {
+        //     let recipe = new recipe(item);
+        //     recipe.insertRecord();
+          })
+        })
+        .then(() => recipe.fetchAll(callback))
+        .catch(console.error);
+      }
+    }
+  )
+};
+
+
+  module.Recipe = Recipe;
+})(window);
