@@ -5,29 +5,22 @@
 //
 
 (function (module) {
-  var recipeView = {};
+  const recipeView = {};
 
-  recipeView.initRecipePage = function() {
+// TODO: fix foo id here
+  const render = function(recipe) {
+    let template - Handlebars.compile($('#foo'),text());
+
+    return template(recipe);
+  }
+
+// this should replace the .toHTML method and append our recipies to the #recipe article element via Handlebars template.
+  recipeView.index = function(recipe) {
     $('.class').hide(); // hide other div tags which needs to be hidden
-    $('#id').show(); // reveal the div tag that will be appended by the handlebar
-    $('#id').on('focus', function(){
-      this.select();
-    });  // if a recipe is on focus then highlight it.
-  };
-
-  // assuming the resulting recipes will be put in an object with properties of 'name' and 'imageLink'
-  recipeView.create = function() {
-    var recipe = localStorage.rawData;
-    $('#id').empty(); // this id belongs to the div that will contain the new result and empty it.
-    recipe.forEach(r => $('#recipe').append(r.toHtml()); // this id belongs to the div that will contain the new result
-    recipeView.initRecipePage();
-  };
-
-  recipeView.toHtml = function() {
-   var source = $('#recipe-template').html();
-   var template = Handlebars.compile(source);
-   return template(this);
-  };
+    $('#recipe').show(); // reveal the div tag that will be appended by the handlebars template
+    $('#recipe article').remove();
+    recipe.forEach(a => $('#recipe').append(render(a)));
+};
 
   module.recipeView = recipeView;
 })(window)
