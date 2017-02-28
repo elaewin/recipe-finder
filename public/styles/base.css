@@ -35,11 +35,19 @@ footer {
   margin: auto;
 }
 
-#about-us {
+#about-us-link {
   display: block;
   height: 90%;
   position: absolute;
     top: 5%;
     bottom: 5%;
     right: 2%;
+}
+
+#about-us-view {
+
+}
+
+#recipe {
+  
 }
