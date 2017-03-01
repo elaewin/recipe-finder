@@ -1,4 +1,3 @@
-/* Landscape phones and smaller*/
 @media only screen and (min-width: 768px) {
   .profile-pic-container {
     display: inline-block;
@@ -9,6 +8,23 @@
   footer {
     max-height: 6vmin;
     min-height: 5vmax;
-    padding-bottom: .75em; 
+    padding-bottom: 1vmax;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  footer {
+    max-height: 4vmin;
+    min-height: 3vmax;
+    padding-bottom: 2vmax;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  footer {
+    max-height: 3vmin;
+    min-height: 2vmax;
+    padding-top: 1vmax;
+    padding-bottom: 1vmax;
   }
 }

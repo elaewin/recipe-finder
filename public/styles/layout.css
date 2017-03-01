@@ -9,6 +9,7 @@ main {
 footer {
   max-height: 8vmin;
   min-height: 5vmax;
+  padding: 1vw;
   color: #141414;
   background-color: #ffaf70;
   position: fixed;
@@ -32,7 +33,8 @@ button {
 }
 
 .profile-pic {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 #logo {
@@ -51,15 +53,19 @@ button {
 }
 
 #about-us-view {
-
+  margin-bottom: 10vw;
 }
 
 #recipe {
-
+  margin: 5vw;
 }
 
-footer aside {
+#keyword-prompt #health-and-diet #health-and-diet-prompt #returning-visit-greet #first-visit-greet{
+  margin-bottom: 10vw;
+}
+
+.attributions {
   float: left;
   font-size: 2vw;
-  padding: 1.5em 0em 0em 1em;
+  paddding: 0;
 }
