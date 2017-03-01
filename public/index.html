@@ -17,8 +17,14 @@
 
     <!-- TODO: get handlebars setup -->
     <script id="recipe-template" type="text/x-handlebars-template">
-      <h2>{{label}}<a href="{{html_url}></a></h2>
-      <img>image
+      <h2>{{label}}<a href="{{html_url}}"></a></h2>
+      <img src="{{image_url}}"></img>
+    </script>
+    <script id="user-preferences" type="text/x-handlebars-template">
+      <ul>
+        <!-- TODO: get values of local storage data for user preferences.  -->
+      </ul>
+      <img src="{{image_url}}"></img>
     </script>
   </head>
 
@@ -27,25 +33,28 @@
       <img id="logo" src="./resources/foodiez-logo.png" alt="plate, fork, and knife logo image">
     </header>
     <main>
-      <section id="first-visit-greet">
+      <section class="first-visit">
         <p>Hey, we know you're busy. We are, too. That's why FoodiEz searches more than 1.5 million recipes to help you figure out what to make for dinner. Just answer a few quick questions for us, and we'll find exactly what you need.</p>
       </section>
 
-      <section id="returning-visit-greet">
-        <p class="returning-visit">Welcome back! Would you like to use your existing preferences?</p>
-        <button id="diet-yes" class="returning-visit">YES</button>
-        <button id="diet-no" class="returning-visit">NO</button>
+      <section class="returning-visit">
+        <p>Welcome back! Would you like to use your existing preferences?</p>
+        <ul>
+          <li></li>
+        </ul>
+        <button>YES</button>
+        <button>NO</button>
       </section>
 
       <!-- end intro section | start health and diet -->
 
-      <section id="health-and-diet-prompt">
+      <section class="health-and-diet-prompt">
         <p>Do you have any health or dietary restrictions?</p>
-        <button id="health-yes">YES</button>
-        <button id="health-no">NO</button>
+        <button>YES</button>
+        <button>NO</button>
       </section>
 
-      <section id="health-and-diet">
+      <section class="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
           <form action="">
@@ -79,7 +88,7 @@
       <!-- end health and diet | start keyword search -->
 
       <!-- start ingredientView -->
-      <section id="keyword-prompt">
+      <section class="keyword-prompt">
         <p>What ingredients do you have on hand?</p>
         <form action="">
           <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
@@ -89,8 +98,8 @@
           <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
           <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
         </form>
-        <button id="keyword-search">GO!</button>
-        </section>
+        <button>GO!</button>
+      </section>
       <!-- end ingredient keyword input -->
 
       <section id="recipe">
@@ -106,7 +115,7 @@
       <!-- end recipeView -->
 
       <!-- start aboutView -->
-      <section id="about-us-view">
+      <section class="about-us-view">
         <div class="profile-pic-container">
           <img class="profile-pic" src="./resources/DavidW.jpg" alt="David Wheeler">
         </div>

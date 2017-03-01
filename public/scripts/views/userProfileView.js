@@ -5,16 +5,36 @@
 
   userProfileController.index = () => {
     $('main section').hide();
-    $('#intro').show().children().hide();
+    $('#first-visit-greet').show().children();
 
     // show proper intro message, depending if user is returning user
-    if (localStorage.rawData) {
-      $('.returning-visit').show();
+    if (/*function to check localStorage*/) {
+      $('.returning-visit').fadeIn();
       $('button.returning-visit').on('click', function(){
         if (this.text() === 'YES') {
-          // TODO write code skip the health and diet prompt to the keyword prompt.
-        } else {
-          // TODO write code to proceed to health and diet prompt
+          $('main section').hide();
+          $('#keyword-prompt').fadeIn();
+          // DONE write code skip the health and diet prompt to the keyword prompt.
+        } if {
+      $('button.returning-visit').on('click', function(){
+        if (this.text() === 'NO') {
+          $('main section').hide();
+          $('#')
+        }
+      })
+          $('main section').hide();
+          $('#health-and-diet-prompt').fadeIn();
+            if (this.text) {
+              $('button#health-yes').on('click', function(){
+                $('main section').hide();
+                $('#health-and-diet').fadeIn();
+              } else {
+                $('main section').hide();
+                $('#keyword-prompt').fadeIn();
+              })
+
+            }
+          // DONE write code to proceed to health and diet prompt
         }
       })
     } else {
