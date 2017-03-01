@@ -19,7 +19,7 @@ Recipe.fetchAll = callback => {
   .then(
     results => {
       if (results.length) {
-        Recipe.loadAll(results);
+        Recipe.loadAll();
         localStorage.rawData.push(results);
         callback();
       } else {

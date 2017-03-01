@@ -1,9 +1,9 @@
 'use strict';
 
 (function(module) {
-  const introController = {};
+  const userProfileController = {};
 
-  introController.index = () => {
+  userProfileController.index = () => {
     $('main section').hide();
     $('#intro').show().children().hide();
 
@@ -29,5 +29,5 @@
     })
   };
 
-  module.introController = introController;
+  module.userProfileController = userProfileController;
 })(window);
