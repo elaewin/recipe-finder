@@ -5,21 +5,26 @@
   edamamDataController.all = [];
 
   edamamDataController.getHTTPRequest = function() {
-    var httpRequest = `https://api.edamam.com/search?q=${/*GET KEYWORDS FROM HTML*/}&app_id=${APP_ID}&app_key=${APP_KEY}&healthLabels=${/*GET HEALTH LABELS FROM HTML*/}&dietLabels=${/*GET DIET LABELS FROM HTML*/}`;
+    // TODO: fill in placeholders
+    return `https://api.edamam.com/search?q=${/*GET KEYWORDS FROM HTML*/}&app_id=${APP_ID}&app_key=${APP_KEY}&healthLabels=${/*GET HEALTH LABELS FROM HTML*/}&dietLabels=${/*GET DIET LABELS FROM HTML*/}`;
   }
 
   // TODO parse out HTTP request
-  edamamDataController.requestData = function(callback) {
-    $.get('https://api.edamam.com/search?q=chicken&app_id=8923b38a&app_key=9e829390b2e423e7cee9b5a57834d3ab')
+  edamamDataController.requestData = function() {
+    $.get(edamamDataController.getHTTPRequest) //()??
     .then(
-      function(data) {
-        edamamDataController.all = data.hits;
-        console.log(data);
+      function(results) {
+        results.hits.forEach(function(element) {
+          let newRecipe = new Recipe();
+          newRecipe.label = element.recipe.label;
+          newRecipe.image = element.recipe.image;
+          newRecipe.url = element.recipe.url;
+          Recipe.all.push(newRecipe);
+        })
       },
       function(err) {
         console.error(err);
-      })
-      .then(callback);
+      });
   }
 
   module.edamamDataController = edamamDataController;
