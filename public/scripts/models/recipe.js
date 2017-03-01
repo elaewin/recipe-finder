@@ -1,4 +1,5 @@
 'use strict';
+
 (function(module){
 function Recipe(obj) {
   this.label = obj.recipe.label;
@@ -13,26 +14,27 @@ Recipe.loadAll = () => {
 };
 
 Recipe.fetchAll = callback => {
-// //TODO: fix foo data here
-//   $.get('/foo')
-//   .then(
-//     results => {
-//       if (results.length) {
-//         Recipe.loadAll(results);
-//         callback();
-//       } else {
-// // TODO: fix this fall-back after we decide on a behaviour for this
-//         // $.getJSON(localStorage.rawData)
-//         // .then(rawData => {
-//         //   rawData.forEach(item => {
-//         //     let recipe = new Recipe(item);
-//         //     recipe.insertRecord();
-//           })
-//         .then(() => Recipe.fetchAll(callback))
-//         .catch(console.error);
-//       }
-//     }
-//   )
+//TODO: fix foo data here
+  $.get('/foo')
+  .then(
+    results => {
+      if (results.length) {
+        Recipe.loadAll(results);
+        localStorage.rawData.push(results);
+        callback();
+      } else {
+// TODO: fix this fall-back after we decide on a behaviour for this
+        $.getJSON(localStorage.rawData)
+        .then(rawData => {
+          rawData.forEach(item => {
+            let recipe = new Recipe(item);
+            Recipe.all.push(JSON.parse(recipe));
+          })
+        .then(() => Recipe.fetchAll(callback))
+        .catch(console.error);
+      }
+    }
+  )
 };
 
 
