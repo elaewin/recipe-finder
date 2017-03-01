@@ -21,7 +21,7 @@
 
   <body>
     <header>
-      <img id="logo"src="./resources/foodiez-logo.png" alt="plate, fork, and knife logo image">
+      <img id="logo" src="./resources/foodiez-logo.png" alt="plate, fork, and knife logo image">
     </header>
     <main>
       <section id="intro">
@@ -35,6 +35,7 @@
           <button>NO</button>
         </section>
       </section>
+      <!-- end intro div | start health and diet -->
       <section id="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
@@ -64,18 +65,22 @@
             <input id="low-sodium" type="radio">
           </form>
       </section>
+      <!-- end health and diet | start keyword  -->
       <section id="keyword-prompt">
         <p>What ingredients do you have on hand?</p>
         <form action="">
-          <input id="" type="text">
+          <input id="ingredient-input" type="text">
         </form>
       </section>
-
+      <!-- end ingredient keyword input -->
       <section id="recipe">
         <article id="recipe-article">
           <!-- This is where our recipes will be. -->
         </article>
       </section>
+      <!-- end recipeView -->
+
+      <!-- start aboutView -->
       <section id="about-us-view">
         <div class="profile-pic-container">
           <img class="profile-pic" src="./resources/DavidW.jpg" alt="David Wheeler">
@@ -89,13 +94,16 @@
         <div class="profile-pic-container">
           <img class="profile-pic" src="" alt="Ronel Rustia">
         </div>
+        <!-- attributions, should always be visible -->
+      </section>
+    </main>
+    <footer>
+      <aside class="attributions">
         <p>Favicon and dinnerware icons created by
           <a href="http://www.freepik.com/">freepik</a> from
           <a href="http://www.flaticon.com/">FLATICON</a>.
         </p>
-      </section>
-    </main>
-    <footer>
+      </aside>
       <p></p>
       <a href="https://www.codefellows.org/"><!--TODO: fix placeholder-->
       <img id="about-us-link" src="./resources/about-us.png" alt="about us"></a>

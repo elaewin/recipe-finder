@@ -9,5 +9,6 @@
   footer {
     max-height: 6vmin;
     min-height: 5vmax;
+    padding-bottom: .75em; 
   }
 }
