@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // function user(obj) {
 //   health: obj.health;  // allergies array
 //   dietary: obj.dietary; // preferred diet array
