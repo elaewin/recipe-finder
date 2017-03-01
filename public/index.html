@@ -16,7 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 
     <!-- TODO: get handlebars setup -->
-    <script id=" " type="text/x-handlebars-template"></script>
+    <script id="recipe-template" type="text/x-handlebars-template">
+      <h2>{{label}}<a href="{{html_url}></a></h2>
+      <img>image
+    </script>
   </head>
 
   <body>
@@ -24,55 +27,72 @@
       <img id="logo" src="./resources/foodiez-logo.png" alt="plate, fork, and knife logo image">
     </header>
     <main>
-      <section id="intro">
-        <p id="first-visit">Hey, we know you're busy. We are, too. That's why FoodiEz searches more than 1.5 million recipes to help you figure out what to make for dinner. Just answer a few quick questions for us, and we'll find exactly what you need.</p>
-        <p class="returning-visit">Welcome back! Would you like to use your existing preferences?</p>
-        <button class="returning-visit">YES</button>
-        <button class="returning-visit">NO</button>
-        <section id="health-and-diet-prompt">
-          <p>Do you have any health or dietary restrictions?</p>
-          <button>YES</button>
-          <button>NO</button>
-        </section>
+      <section id="first-visit-greet">
+        <p>Hey, we know you're busy. We are, too. That's why FoodiEz searches more than 1.5 million recipes to help you figure out what to make for dinner. Just answer a few quick questions for us, and we'll find exactly what you need.</p>
       </section>
-      <!-- end intro div | start health and diet -->
+
+      <section id="returning-visit-greet">
+        <p class="returning-visit">Welcome back! Would you like to use your existing preferences?</p>
+        <button id="diet-yes" class="returning-visit">YES</button>
+        <button id="diet-no" class="returning-visit">NO</button>
+      </section>
+
+      <!-- end intro section | start health and diet -->
+
+      <section id="health-and-diet-prompt">
+        <p>Do you have any health or dietary restrictions?</p>
+        <button id="health-yes">YES</button>
+        <button id="health-no">NO</button>
+      </section>
+
       <section id="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
           <form action="">
-            <input id="peanut-free" type="radio">
-            <input id="tree-nut-free" type="radio">
-            <input id="soy-free" type="radio">
-            <input id="fish-free" type="radio">
-            <input id="shellfish-free" type="radio">
-            <input id="vegan" type="radio">
-            <input id="vegetarian" type="radio">
-            <input id="paleo" type="radio">
-            <input id="dairy-free" type="radio">
-            <input id="gluten-free" type="radio">
-            <input id="wheat-free" type="radio">
-            <input id="fat-free" type="radio">
-            <input id="low-sugar" type="radio">
-            <input id="egg-free" type="radio">
+            <input id="peanut-free" type="radio"> Peanut Free <br>
+            <input id="tree-nut-free" type="radio"> Tree Nut Free <br>
+            <input id="soy-free" type="radio"> Soy Free <br>
+            <input id="fish-free" type="radio"> Fish Free <br>
+            <input id="shellfish-free" type="radio"> Shellfish Free <br>
+            <input id="vegan" type="radio"> Vegan <br>
+            <input id="vegetarian" type="radio"> Vegitarian <br>
+            <input id="paleo" type="radio"> Paleo <br>
+            <input id="dairy-free" type="radio"> Dairy Free <br>
+            <input id="gluten-free" type="radio"> Gluten Free <br>
+            <input id="wheat-free" type="radio"> Wheat Free <br>
+            <input id="fat-free" type="radio"> Fat Free <br>
+            <input id="low-sugar" type="radio"> Low Sugar <br>
+            <input id="egg-free" type="radio"> Egg Free
           </form>
-          <p>Diet Restrictions</p>
-          <form action="">
-            <input id="balanced" type="radio">
-            <input id="high-protein" type="radio">
-            <input id="high-fiber" type="radio">
-            <input id="low-fat" type="radio">
-            <input id="low-carb" type="radio">
-            <input id="low-sodium" type="radio">
-          </form>
+        <p>Diet Restrictions</p>
+
+        <form action="">
+          <input id="balanced" type="radio"> Balanced Diet <br>
+          <input id="high-protein" type="radio"> High Protien <br>
+          <input id="high-fiber" type="radio"> High Fiber <br>
+          <input id="low-fat" type="radio"> Low Fat <br>
+          <input id="low-carb" type="radio"> Low Carb <br>
+          <input id="low-sodium" type="radio"> Low Sodium
+        </form>
+
       </section>
-      <!-- end health and diet | start keyword  -->
+      <!-- end health and diet | start keyword search -->
+
+      <!-- start ingredientView -->
       <section id="keyword-prompt">
         <p>What ingredients do you have on hand?</p>
         <form action="">
-          <input id="ingredient-input" type="text">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
         </form>
-      </section>
+        <button id="keyword-search">GO!</button>
+        </section>
       <!-- end ingredient keyword input -->
+
       <section id="recipe">
         <article id="recipe-article">
           <!-- This is where our recipes will be. -->
