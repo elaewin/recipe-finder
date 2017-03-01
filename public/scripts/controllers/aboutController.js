@@ -6,7 +6,7 @@ const aboutController = {};
 
   function aboutController.init () {
     // hide all sections, replace "class-hide" with whatever class will hide the tags
-    $('.class-hide').hide();
+    $('main section').hide();
     //reveal specific section with the id="about-us-view"
     $('#about-us-view').show();
   }
