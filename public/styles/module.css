@@ -1,20 +1,18 @@
 /* Landscape phones and smaller*/
 @media only screen and (max-width: 480px) {
-
-
-}
-
-/* portrait tablets and minis */
-@media only screen and (max-width: 767px) {
-
-}
-
-/* Landscape tablets */
-@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .profile-pic-container {
+    width: 80vw;
+    height: 80vw;
+    margin: auto;
+  }
 
 }
 
-/* large desktop */
+
 @media only screen and (max-width: 1200px) {
-
+  .profile-pic-container {
+    display: inline-block;
+    width: 20vmax;
+    height: 20vmax;
+  }
 }
