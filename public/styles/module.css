@@ -1,10 +1,17 @@
 /* Landscape phones and smaller*/
 @media only screen and (max-width: 480px) {
-
+  .profile-pic-container {
+    width: 80vw;
+    height: 80vw;
+  }
 
 }
 
 
 @media only screen and (max-width: 1200px) {
-
+  .profile-pic-container {
+    display: inline-block;
+    width: 20vmax;
+    height: 20vmax;
+  }
 }
