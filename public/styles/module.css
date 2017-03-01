@@ -5,26 +5,29 @@
     height: 20vmax;
   }
 
+  .attributions {
+    float: left;
+    font-size: 1.5vw;
+    padding: 0;
+  }
+
   footer {
-    max-height: 6vmin;
-    min-height: 5vmax;
+    max-height: 3vmin;
+    min-height: 2vmax;
     padding-bottom: 1vmax;
   }
 }
 
 @media only screen and (min-width: 960px) {
   footer {
-    max-height: 4vmin;
-    min-height: 3vmax;
+    max-height: 2vmin;
+    min-height: 1.5vmax;
     padding-bottom: 2vmax;
   }
-}
 
-@media only screen and (min-width: 1600px) {
-  footer {
-    max-height: 3vmin;
-    min-height: 2vmax;
-    padding-top: 1vmax;
-    padding-bottom: 1vmax;
+  .attributions {
+    float: left;
+    font-size: 1vw;
+    paddding: 0;
   }
 }
