@@ -10,17 +10,21 @@
   }
 
   // TODO parse out HTTP request
-  edamamDataController.requestData = function(callback) {
-    $.get(edamamDataController.getHTTPRequest)
+  edamamDataController.requestData = function() {
+    $.get(edamamDataController.getHTTPRequest) //()??
     .then(
-      function(data) {
-        edamamDataController.all = data.hits;
-        console.log(data);
+      function(results) {
+        results.hits.forEach(function(element) {
+          let newRecipe = new Recipe();
+          newRecipe.label = element.recipe.label;
+          newRecipe.image = element.recipe.image;
+          newRecipe.url = element.recipe.url;
+          Recipe.all.push(newRecipe);
+        })
       },
       function(err) {
         console.error(err);
-      })
-      .then(callback);
+      });
   }
 
   module.edamamDataController = edamamDataController;
