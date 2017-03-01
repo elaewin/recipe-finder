@@ -5,6 +5,7 @@
   edamamDataController.all = [];
 
   edamamDataController.getHTTPRequest = function() {
+    // TODO: fill in placeholders
     var httpRequest = `https://api.edamam.com/search?q=${/*GET KEYWORDS FROM HTML*/}&app_id=${APP_ID}&app_key=${APP_KEY}&healthLabels=${/*GET HEALTH LABELS FROM HTML*/}&dietLabels=${/*GET DIET LABELS FROM HTML*/}`;
   }
 
