@@ -8,18 +8,22 @@
   const recipeView = {};
 
   const render = function(recipe) {
-    let template - Handlebars.compile($('#recipe-template'),text());
-
-    return template(recipe);
+    let template - Handlebars.compile($('#recipe-template').text());
+    let context  = {
+      label: recipe.label,
+      image: recipe.image,
+      url: recipe.url
+    };
+    return template(context);
   }
 
 // this should replace the .toHTML method and append our recipies to the #recipe article element via Handlebars template.
   recipeView.index = function(recipe) {
     // TODO: fix foo class once index is finished fleshing out
-    $('.foo').hide(); // hide other div tags which needs to be hidden
-    $('#recipe').show(); // reveal the div tag that will be appended by the handlebars template
-    $('#recipe article').remove();
+    $('main section').hide(); // hide other div tags which needs to be hidden
+    s$('#recipe article').remove();
     recipe.forEach(a => $('#recipe').append(render(a)));
+    $('#recipe').show(); // reveal the div tag that have been appended by the handlebars template
 };
 
   module.recipeView = recipeView;
