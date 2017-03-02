@@ -16,7 +16,7 @@
     $.get(getHTTPRequestString(UserProfile.diet, UserProfile.health, UserProfile.keyword))
     .then(results => {
       edamamDataController.all = results.hits;
-      console.log(`Here's the raw JSON data: `);
+      console.log(`Here's the raw JSON data:`);
       console.log(edamamDataController.all);
     },
       err => {
