@@ -24,7 +24,6 @@
       <ul>
         <!-- TODO: get values of local storage data for user preferences.  -->
       </ul>
-      <img src="{{image_url}}"></img>
     </script>
   </head>
 
@@ -57,48 +56,50 @@
       <section class="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
-          <form action="">
-            <input id="peanut-free" type="radio"> Peanut Free <br>
-            <input id="tree-nut-free" type="radio"> Tree Nut Free <br>
-            <input id="soy-free" type="radio"> Soy Free <br>
-            <input id="fish-free" type="radio"> Fish Free <br>
-            <input id="shellfish-free" type="radio"> Shellfish Free <br>
-            <input id="vegan" type="radio"> Vegan <br>
-            <input id="vegetarian" type="radio"> Vegitarian <br>
-            <input id="paleo" type="radio"> Paleo <br>
-            <input id="dairy-free" type="radio"> Dairy Free <br>
-            <input id="gluten-free" type="radio"> Gluten Free <br>
-            <input id="wheat-free" type="radio"> Wheat Free <br>
-            <input id="fat-free" type="radio"> Fat Free <br>
-            <input id="low-sugar" type="radio"> Low Sugar <br>
-            <input id="egg-free" type="radio"> Egg Free
+          <form id="health-input" action="">
+            <input class="health-check" value="peanut-free" type="radio"> Peanut Free <br>
+            <input class="health-check" value="tree-nut-free" type="radio"> Tree Nut Free <br>
+            <input class="health-check" value="soy-free" type="radio"> Soy Free <br>
+            <input class="health-check" value="fish-free" type="radio"> Fish Free <br>
+            <input class="health-check" value="shellfish-free" type="radio"> Shellfish Free <br>
+            <input class="health-check" value="vegan" type="radio"> Vegan <br>
+            <input class="health-check" value="vegetarian" type="radio"> Vegitarian <br>
+            <input class="health-check" value="paleo" type="radio"> Paleo <br>
+            <input class="health-check" value="dairy-free" type="radio"> Dairy Free <br>
+            <input class="health-check" value="gluten-free" type="radio"> Gluten Free <br>
+            <input class="health-check" value="wheat-free" type="radio"> Wheat Free <br>
+            <input class="health-check" value="fat-free" type="radio"> Fat Free <br>
+            <input class="health-check" value="low-sugar" type="radio"> Low Sugar <br>
+            <input class="health-check" value="egg-free" type="radio"> Egg Free<br>
+            <input type="submit" value="GO!" id="health-check-submit">
           </form>
+
         <p>Diet Restrictions</p>
 
-        <form action="">
-          <input id="balanced" type="radio"> Balanced Diet <br>
-          <input id="high-protein" type="radio"> High Protien <br>
-          <input id="high-fiber" type="radio"> High Fiber <br>
-          <input id="low-fat" type="radio"> Low Fat <br>
-          <input id="low-carb" type="radio"> Low Carb <br>
-          <input id="low-sodium" type="radio"> Low Sodium
+        <form class="diet" action="">
+          <input class="diet-check" value="balanced" type="radio"> Balanced Diet <br>
+          <input class="diet-check" value="high-protein" type="radio"> High Protien <br>
+          <input class="diet-check" value="high-fiber" type="radio"> High Fiber <br>
+          <input class="diet-check" value="low-fat" type="radio"> Low Fat <br>
+          <input class="diet-check" value="low-carb" type="radio"> Low Carb <br>
+          <input class="diet-check" value="low-sodium" type="radio"> Low Sodium
         </form>
-
+        <button id="diet-check-submit">GO!</button>
       </section>
       <!-- end health and diet | start keyword search -->
 
       <!-- start ingredientView -->
       <section class="keyword-prompt">
         <p>What ingredients do you have on hand?</p>
-        <form action="">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+        <form id="keyword-form" action="">
+          <input value="" type="text" placeholder="Add an Ingredient">
+          <input value="" type="text" placeholder="Add an Ingredient">
+          <input value="" type="text" placeholder="Add an Ingredient">
+          <input value="" type="text" placeholder="Add an Ingredient">
+          <input value="" type="text" placeholder="Add an Ingredient">
+          <input value="" type="text" placeholder="Add an Ingredient">
         </form>
-        <button>GO!</button>
+        <button id="keyword-submit">GO!</button>
       </section>
       <!-- end ingredient keyword input -->
 
@@ -128,7 +129,6 @@
         <div class="profile-pic-container">
           <img class="profile-pic" src="" alt="Ronel Rustia">
         </div>
-
       </section>
     </main>
     <footer>
@@ -149,10 +149,13 @@
     </script>
     <script src="/scripts/models/token.js"></script>
     <script src="/scripts/models/recipe.js"></script>
+    <script src="/scripts/models/userProfile.js"></script>
     <script src="/scripts/controllers/edamamDataController.js"></script>
     <script src="/scripts/controllers/routes.js">
     </script>
     <!-- <script src="/scripts/views/repoView.js"></script> -->
     <!-- <script src="/scripts/views/recipeView.js"></script> -->
+    <script src="/scripts/views/userProfileView.js"></script>
+
   </body>
 </html>
