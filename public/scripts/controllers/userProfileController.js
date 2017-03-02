@@ -3,6 +3,17 @@
 (function(module) {
   const userProfileController = {};
 
+  // Place UserProfile data into localStorage. Returns true if successful, false otherwise.
+  userProfileController.addUserProfileoLocalStorage = function() {
+    if (UserProfile.diet.length > 0 && UserProfile.health.length > 0 && UserProfile.keyword.length > 0) {
+      localStorage.setItem('diet', UserProfile.diet);
+      localStorage.setItem('health', UserProfile.health);
+      localStorage.setItem('keyword', UserProfile.keyword);
+      return true;
+    }
+    return false;
+  }
+
   userProfileController.checkLocalStorage = function() {
     if (localStorage.recipeData) {
       return true;
