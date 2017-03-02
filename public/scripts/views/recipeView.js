@@ -8,7 +8,7 @@
   const recipeView = {};
 
   const render = function(recipe) {
-    let template - Handlebars.compile($('#recipe-template').text());
+    let template = Handlebars.compile($('#recipe-template').text());
     let context  = {
       label: recipe.label,
       image: recipe.image,
