@@ -5,7 +5,7 @@
 
   // adds recipes in Recipe.all to localStorage.recipeData. Returns true if successful, false otherwise.
   recipeController.addRecipesToLocalStorage() {
-    if (recipe.all.length > 0) {
+    if (Recipe.all.length > 0) {
       localStorage.setItem('recipeData', Recipe.all);
       return true;
     }

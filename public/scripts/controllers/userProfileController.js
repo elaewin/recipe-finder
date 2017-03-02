@@ -3,19 +3,23 @@
 (function(module) {
   const userProfileController = {};
 
-  // Place UserProfile data into localStorage. Returns true if successful, false otherwise.
+  // Place UserProfile data into localStorage.
   userProfileController.addUserProfileoLocalStorage = function() {
-    if (UserProfile.diet.length > 0 && UserProfile.health.length > 0 && UserProfile.keyword.length > 0) {
-      localStorage.setItem('diet', UserProfile.diet);
-      localStorage.setItem('health', UserProfile.health);
-      localStorage.setItem('keyword', UserProfile.keyword);
-      return true;
+    if (UserProfile.diet.length > 0) {
+      localStorage.setItem('diet', UserProfile.keyword);
     }
-    return false;
+
+    if (UserProfile.health.length > 0) {
+      localStorage.setItem('health', UserProfile.health);
+    }
+
+    if (UserProfile.keyword.length > 0) {
+      localStorage.setItem('keyword', UserProfile.keyword);
+    }
   }
 
   userProfileController.checkLocalStorage = function() {
-    if (localStorage.recipeData) {
+    if (localStorage.keyword) {
       return true;
     }
     return false;
