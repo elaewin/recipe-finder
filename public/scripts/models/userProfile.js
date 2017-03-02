@@ -7,6 +7,6 @@ function UserProfile (object) {
   this.keyword = object.keyword
 }
 
-UserProfile.health = [];
-UserProfile.diet = [];
-UserProfile.keyword = [];
+UserProfile.health = [dummy1, dummy2, dummy3];
+UserProfile.diet = [dummy4, dummy5, dummy6];
+UserProfile.keyword = [dummy7, dummy8, dummy9];

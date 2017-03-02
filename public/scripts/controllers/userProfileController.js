@@ -29,6 +29,15 @@
         localStorage.recipeData.push(stringify(data))
       });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  module.userProfileController = userProfileController;
+=======
+>>>>>>> 7eb1f907eee272c26d3e2712cfd166fab7f5e9ac
+>>>>>>> 72c2d99eb6daca5ddccca101d0d58ddd8f4772f6
   }
 
   module.userProfileController = userProfileController;
