@@ -1,9 +1,9 @@
 'use strict';
 
 (function(module) {
-  const userProfileController = {};
+  const userProfileView = {};
 
-  userProfileController.index = () => {
+  userProfileView.index = () => {
     $('main section').hide();
 
     // show proper intro message, depending if user is returning user
@@ -53,7 +53,7 @@
     })
   };
 
-  module.userProfileController = userProfileController;
+  module.userProfileView = userProfileView;
 })(window);
 
 
