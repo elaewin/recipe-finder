@@ -9,6 +9,7 @@
     $.get('/edamam/search?q=basil+chicken&from=0&to=5') // TODO: place concatenated HTTP request here
     .then(results => {
       edamamDataController.all = results.hits;
+      console.log(`Here's the raw JSON data: `);
       console.log(edamamDataController.all);
     },
       err => {
