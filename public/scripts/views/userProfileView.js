@@ -53,24 +53,43 @@
   //   })
   // };
   $('#health-input').submit(function(event){
-    console.log('Inside health-input submit');
     event.preventDefault();
   });
 
   $('#health-check-submit').on('click', function(event) {
     event.preventDefault();
-    console.log('health-check button clicked');
     $('.health-check:checked').each(function(){
-       UserProfile.health.push($(this).val);
+       UserProfile.health.push($(this).val());
     })
 
+  $('#diet-input').submit(function(event){
+    event.preventDefault();
+  });
+
+  $('#diet-check-submit').on('click', function(event) {
+    event.preventDefault();
+    $('.diet-check:checked').each(function(){
+       UserProfile.diet.push($(this).val());
+    })
+  });
+
+  $('#keyword-input').submit(function(event){
+    event.preventDefault();
+  });
+
+  $('#keyword-submit').on('click', function(event) {
+    event.preventDefault();
+    $('.keyword-entry').each(function(){
+      if($(this).val().length) {
+          UserProfile.keyword.push($(this).val());
+      }
+    })
+  });
 
 
 
-  // $('.diet-check:checked').each(function(){
-  //    UserProfile.diet.push($(this).val);
-  // })
-  //
+
+
   // $('.keyword-prompt button').on('click', function() {
   //   $('#keyword-form').find(':input').each(function(){
   //   UserProfile.keyword.push($(this).val());
