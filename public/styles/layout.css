@@ -3,7 +3,7 @@ header {
 }
 
 main {
-  padding: 2vmin;
+  padding: 2vmin 2vmin 20vmin 2vmin;
 }
 
 footer {
@@ -56,12 +56,9 @@ button {
   margin: 5vw;
 }
 
-.about-us-view .keyword-prompt .health-and-diet .health-and-diet-prompt .returning-visit .first-visit {
-  margin-bottom: 10vw;
-}
-
 .attributions {
   float: left;
   font-size: 2vw;
   padding: 0;
+  margin-bottom: 2vmin;
 }
