@@ -13,6 +13,7 @@ Recipe.all = [];
 
 Recipe.loadAll = () => {
   Recipe.all = edamamDataController.all.map(ele => new Recipe(ele));
+  console.log(Recipe.all);
 };
 
   Recipe.fetchAll = callback => {
@@ -54,8 +55,6 @@ Recipe.loadAll = () => {
     }
 
   };
-
-
 
 
   module.Recipe = Recipe;
