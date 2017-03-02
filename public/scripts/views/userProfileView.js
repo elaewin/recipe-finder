@@ -59,13 +59,13 @@
 
 ****to get user data into arrays****
 
-$('.health input').on('click', function() {
-  UserProfile.health.push(this.value);
-});
+$('.health-check:checked').each(function(){
+   UserProfile.health.push($(this).val);
+})
 
-$('.diet input').on('click', function() {
-  UserProfile.diet.push(this.value);
-});
+$('.diet-check:checked').each(function(){
+   UserProfile.diet.push($(this).val);
+})
 
 $('.keyword-prompt button').on('click', function() {
   $('#keyword-form').find(':input').each(function(){
