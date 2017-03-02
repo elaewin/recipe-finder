@@ -3,8 +3,23 @@
 (function(module) {
   const userProfileController = {};
 
+  // Place UserProfile data into localStorage.
+  userProfileController.addUserProfileoLocalStorage = () => {
+    if (UserProfile.diet.length > 0) {
+      localStorage.setItem('diet', UserProfile.keyword);
+    }
+
+    if (UserProfile.health.length > 0) {
+      localStorage.setItem('health', UserProfile.health);
+    }
+
+    if (UserProfile.keyword.length > 0) {
+      localStorage.setItem('keyword', UserProfile.keyword);
+    }
+  }
+
   userProfileController.checkLocalStorage = function() {
-    if (localStorage.recipeData) {
+    if (localStorage.keyword) {
       return true;
     }
     return false;
