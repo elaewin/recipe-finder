@@ -4,6 +4,13 @@
   const edamamDataController = {};
   edamamDataController.all = []; // will be JSON string with only the data we need
 
+  // returns an HTTP request strings based on diet, health, and keyword arrays
+  function buildHTTPRequestString(dietArr, healthArr, keywordArr) {
+    var keywordString = '';
+    keywordArr.forEach(keyword => keywordString += keyword + '+')
+    var HTTPRequestString =`/edamam/search?q`;
+  }
+
   // TODO parse out HTTP request
   edamamDataController.requestData = function() {
     $.get('/edamam/search?q=basil+chicken&from=0&to=5') // TODO: place concatenated HTTP request here
