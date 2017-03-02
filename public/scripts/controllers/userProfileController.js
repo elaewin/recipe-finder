@@ -31,12 +31,6 @@
         localStorage.recipeData.push(stringify(data))
       })
     }
-<<<<<<< HEAD
-
-
-  module.userProfileController = userProfileController;
-=======
->>>>>>> 7eb1f907eee272c26d3e2712cfd166fab7f5e9ac
   }
 
   module.userProfileController = userProfileController;
