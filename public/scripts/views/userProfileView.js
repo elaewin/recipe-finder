@@ -9,17 +9,20 @@
     // show proper intro message, depending if user is returning user
     if (userProfileController.checkLocalStorage()) {
       $('.returning-visit').fadeIn();
-      $('button.returning-visit').on('click', function(){
+      $('button .returning-visit').on('click', function(){
+        console.log('returning visit button clicked');
         if (this.text() === 'YES') {
           $('main section').hide();
           $('.keyword-prompt').fadeIn();
           // skip the health and diet prompt and go to the keyword prompt.
         } else if (this.text() === 'NO') {
+            console.log('clear localStorage button clicked');
           $('main section').hide();
           $('.health-and-diet-prompt').fadeIn();
         }
       });
     } else {
+      console.log('local storage was empty');
       $('.first-visit .health-and-diet-prompt').fadeIn();
     }
     $('button .health-and-diet-prompt').on('click', function(){
