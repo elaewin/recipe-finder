@@ -20,8 +20,8 @@ function proxyEdamam(request, response) {
   (requestProxy({
     url: `https://api.edamam.com/search`,
     headers: {
-      app_id: '8923b38a',
-      app_key: '9e829390b2e423e7cee9b5a57834d3ab'
+      app_id: process.env.APP_ID || '8923b38a',
+      app_key: process.env.APP_KEY || '9e829390b2e423e7cee9b5a57834d3ab'
     }
   }))(request, response);
 }
