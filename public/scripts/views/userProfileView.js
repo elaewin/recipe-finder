@@ -16,7 +16,7 @@
           // skip the health and diet prompt and go to the keyword prompt.
         } else if (this.text() === 'NO') {
           $('main section').hide();
-          $('.health-and-diet-prompt')fadeIn();
+          $('.health-and-diet-prompt').fadeIn();
         }
       });
     } else {
