@@ -20,9 +20,9 @@
         }
       });
     } else {
-      $('.first-visit').show();
+      $('.first-visit .health-and-diet-prompt').fadeIn();
     }
-    $('button.health-and-diet-prompt').on('click', function(){
+    $('button .health-and-diet-prompt').on('click', function(){
       if (this.text() === 'YES') {
         // TODO: write code to proceed to health and diet
       } else {
