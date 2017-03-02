@@ -56,7 +56,7 @@
       <section class="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
-          <form action="">
+          <form class="health" action="">
             <input id="peanut-free" type="radio"> Peanut Free <br>
             <input id="tree-nut-free" type="radio"> Tree Nut Free <br>
             <input id="soy-free" type="radio"> Soy Free <br>
@@ -74,13 +74,13 @@
           </form>
         <p>Diet Restrictions</p>
 
-        <form action="">
-          <input id="balanced" type="radio"> Balanced Diet <br>
-          <input id="high-protein" type="radio"> High Protien <br>
-          <input id="high-fiber" type="radio"> High Fiber <br>
-          <input id="low-fat" type="radio"> Low Fat <br>
-          <input id="low-carb" type="radio"> Low Carb <br>
-          <input id="low-sodium" type="radio"> Low Sodium
+        <form class="diet" action="">
+          <input value="balanced" type="radio"> Balanced Diet <br>
+          <input value="high-protein" type="radio"> High Protien <br>
+          <input value="high-fiber" type="radio"> High Fiber <br>
+          <input value="low-fat" type="radio"> Low Fat <br>
+          <input value="low-carb" type="radio"> Low Carb <br>
+          <input value="low-sodium" type="radio"> Low Sodium
         </form>
 
       </section>
@@ -89,13 +89,13 @@
       <!-- start ingredientView -->
       <section class="keyword-prompt">
         <p>What ingredients do you have on hand?</p>
-        <form action="">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
-          <input id="ingredient-input" type="text" placeholder="Add an Ingredient">
+        <form id="keyword-form" action="">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
+          <input value="ingredient-input" type="text" placeholder="Add an Ingredient">
         </form>
         <button>GO!</button>
       </section>

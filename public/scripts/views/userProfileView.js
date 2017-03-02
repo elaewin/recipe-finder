@@ -57,7 +57,18 @@
 })(window);
 
 
-// *******************************************
-$('input.health-and-diet').on('click', function() {
-  push
-})
+****to get user data into arrays****
+
+$('.health input').on('click', function() {
+  UserProfile.health.push(this.value);
+});
+
+$('.diet input').on('click', function() {
+  UserProfile.diet.push(this.value);
+});
+
+$('.keyword-prompt button').on('click', function() {
+  $('#keyword-form').find(':input').each(function(){
+  UserProfile.keyword.push($(this).val());
+});
+});
