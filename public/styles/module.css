@@ -14,12 +14,6 @@
   display: inline-block;
 }
 
-/* make images and paragraphs stack*/
-.profile-pic:focus {
-
-}
-
-
 @media only screen and (min-width: 768px) {
 
 
@@ -41,6 +35,11 @@
     padding-bottom: 1vmax;
   }
 
+  .about-text {
+    text-align: center;
+    margin: auto;
+  }
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -53,6 +52,17 @@
   .attributions {
     float: left;
     font-size: 1vw;
-    paddding: 0;
+    padding: 0;
   }
+
+  .about-text, .profile-pic-container {
+    display: inline-block;
+  }
+
+  .about-text {
+    text-align: center;
+    margin: auto;
+    vertical-align: middle
+  }
+
 }
