@@ -23,6 +23,8 @@
   // create a new API request and place data into Recipe.all
   userProfileController.fetchNewResults = function() {
     localStorage.clear();
+    // TODO: parse raw JSON data and grab only the data we need
+
     edamamDataController.requestData()
     .then( function() {
       Recipe.all.forEach( function(data) {
@@ -36,6 +38,6 @@
 =======
 >>>>>>> 7eb1f907eee272c26d3e2712cfd166fab7f5e9ac
   }
-  
+
   module.userProfileController = userProfileController;
 })(window);
