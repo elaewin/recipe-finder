@@ -13,10 +13,7 @@
 
   // TODO parse out HTTP request
   edamamDataController.requestData = function() {
-    let dietArr = ['low-carb'];
-    let healthArr = ['vegan'];
-    let keywordArr = ['chicken', 'basil'];
-    $.get(getHTTPRequestString(dietArr, healthArr, keywordArr)) // TODO: place concatenated HTTP request here
+    $.get(getHTTPRequestString(UserProfile.diet, UserProfile.health, UserProfile.keyword)) // TODO: place concatenated HTTP request here
     .then(results => {
       edamamDataController.all = results.hits;
       console.log(`Here's the raw JSON data: `);
