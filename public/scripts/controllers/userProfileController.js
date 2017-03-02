@@ -29,7 +29,7 @@
         localStorage.recipeData.push(stringify(data))
       })
     }
-
-  module.userProfileController = userProfileController;
   }
+  
+  module.userProfileController = userProfileController;
 })(window);
