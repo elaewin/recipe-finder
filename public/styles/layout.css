@@ -52,15 +52,11 @@ button {
     right: 2%;
 }
 
-#about-us-view {
-  margin-bottom: 10vw;
-}
-
 #recipe {
   margin: 5vw;
 }
 
-#keyword-prompt #health-and-diet #health-and-diet-prompt #returning-visit-greet #first-visit-greet{
+.about-us-view .keyword-prompt .health-and-diet .health-and-diet-prompt .returning-visit .first-visit {
   margin-bottom: 10vw;
 }
 

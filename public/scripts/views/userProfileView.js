@@ -55,3 +55,9 @@
 
   module.userProfileController = userProfileController;
 })(window);
+
+
+// *******************************************
+$('input.health-and-diet').on('click', function() {
+  push
+})
