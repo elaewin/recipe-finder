@@ -16,8 +16,7 @@ Recipe.loadAll = () => {
 Recipe.fetchAll = callback => {
 //TODO: fix foo data here
   $.get('/foo')
-  .then(
-    results => {
+  .then(results => {
       if (results.length) {
         Recipe.loadAll();
         localStorage.rawData.push(results);
@@ -32,10 +31,9 @@ Recipe.fetchAll = callback => {
           })
         .then(() => Recipe.fetchAll(callback))
         .catch(console.error);
-      }
+      })
     }
-  )
-};
+})}
 
 
   module.Recipe = Recipe;

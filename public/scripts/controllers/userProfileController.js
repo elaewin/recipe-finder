@@ -25,8 +25,6 @@
     localStorage.clear();
     // TODO: parse raw JSON data and grab only the data we need
     // edamamDataController.requestData();
-    
-
   }
 
 })(window);
