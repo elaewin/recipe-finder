@@ -3,7 +3,7 @@
 (function(module) {
   const userProfileControler = {};
 
-  userProfileControler.checkLocalStorage = function() {
+  userProfileController.checkLocalStorage = function() {
     if (localStorage.recipeData) {
       return true;
     }
@@ -11,7 +11,7 @@
   }
 
   // place previous results into Recipe.all for use in the View
-  userProfileControler.fetchPreviousResults = function() {
+  userProfileController.fetchPreviousResults = function() {
     $.getJSON(localStorage.recipeData)
     .then(recipeData => {
       recipeData.forEach(recipe => {
@@ -21,12 +21,16 @@
   }
 
   // create a new API request and place data into Recipe.all
-  userProfileControler.fetchNewResults = function() {
+  userProfileController.fetchNewResults = function() {
     localStorage.clear();
-    // TODO: parse raw JSON data and grab only the data we need
-    // edamamDataController.requestData();
+    edamamDataController.requestData()
+    .then( function() {
+      Recipe.all.forEach( function(data) {
+        localStorage.recipeData.push(stringify(data))
+      })
+    }
 
 
+  module.userProfileController = userProfileController;
   }
-
 })(window);
