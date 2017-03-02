@@ -1,7 +1,6 @@
 'use strict';
 (function(module) {
-  // const userProfile = {};
-// user profile constructor
+
 function UserProfile (object) {
   this.health = object.health;
   this.diet = object.diet;
