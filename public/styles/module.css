@@ -1,4 +1,28 @@
+.rfloat {
+  float: right
+}
+
+.lfloat {
+  float: left
+}
+
+.block-whole {
+  display: block;
+}
+
+.block-partial {
+  display: inline-block;
+}
+
+/* make images and paragraphs stack*/
+.profile-pic:focus {
+
+}
+
+
 @media only screen and (min-width: 768px) {
+
+
   .profile-pic-container {
     display: inline-block;
     width: 20vmax;
@@ -16,6 +40,7 @@
     min-height: 2vmax;
     padding-bottom: 1vmax;
   }
+
 }
 
 @media only screen and (min-width: 960px) {
