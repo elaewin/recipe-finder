@@ -5,7 +5,6 @@
 
   userProfileController.index = () => {
     $('main section').hide();
-    $('#first-visit-greet').show().children();
 
     // show proper intro message, depending if user is returning user
     if (/*function to check localStorage*/) {
@@ -15,13 +14,18 @@
           $('main section').hide();
           $('#keyword-prompt').fadeIn();
           // DONE write code skip the health and diet prompt to the keyword prompt.
-        } if {
-      $('button.returning-visit').on('click', function(){
-        if (this.text() === 'NO') {
+        } else if (this.text() === 'NO') {
           $('main section').hide();
-          $('#')
+          $('#health-and-diet-prompt')fadeIn();
         }
       })
+
+
+
+
+
+
+
           $('main section').hide();
           $('#health-and-diet-prompt').fadeIn();
             if (this.text) {
@@ -51,3 +55,20 @@
 
   module.userProfileController = userProfileController;
 })(window);
+
+
+****to get user data into arrays****
+
+$('.health input').on('click', function() {
+  UserProfile.health.push(this.value);
+});
+
+$('.diet input').on('click', function() {
+  UserProfile.diet.push(this.value);
+});
+
+$('.keyword-prompt button').on('click', function() {
+  $('#keyword-form').find(':input').each(function(){
+  UserProfile.keyword.push($(this).val());
+});
+});
