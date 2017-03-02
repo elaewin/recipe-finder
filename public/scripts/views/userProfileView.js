@@ -7,7 +7,7 @@
     // hide all sections in Main
     $('main section').hide();
     // show proper intro message, depending if user is returning user
-    if (userProfileController.checkLocalStorage();) {
+    if (userProfileController.checkLocalStorage()) {
       $('.returning-visit').fadeIn();
       $('button.returning-visit').on('click', function(){
         if (this.text() === 'YES') {
@@ -24,16 +24,15 @@
     }
     $('button .health-and-diet-prompt').on('click', function(){
       if (this.text() === 'YES') {
-        // TODO: write code to proceed to health and diet
-      } else {
-        // TODO: write code to skip to the ingredient/keyword prompt
+        $('main section').hide();
+        $('.health-and-diet').fadeIn();
+      } else if (this.text() === 'NO') {
+        $('main section').hide();
+        $('.keyword-prompt')fadeIn();
       }
     })
   };
 
-    // DONE write code to proceed to health and diet prompt
-
-    }
   // this is all done
   $('#health-input').submit(function(event){
     event.preventDefault();

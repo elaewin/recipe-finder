@@ -30,7 +30,6 @@
       Recipe.all.forEach( function(data) {
         localStorage.recipeData.push(stringify(data))
       });
-    }
 
   module.userProfileController = userProfileController;
 })(window);
