@@ -56,7 +56,7 @@
       <section class="health-and-diet">
         <p>What are your health and diet restrictions?</p>
         <p>Health Restrictions</p>
-          <form class="health" action="">
+          <form id="health-input" action="">
             <input class="health-check" value="peanut-free" type="radio"> Peanut Free <br>
             <input class="health-check" value="tree-nut-free" type="radio"> Tree Nut Free <br>
             <input class="health-check" value="soy-free" type="radio"> Soy Free <br>
@@ -70,19 +70,21 @@
             <input class="health-check" value="wheat-free" type="radio"> Wheat Free <br>
             <input class="health-check" value="fat-free" type="radio"> Fat Free <br>
             <input class="health-check" value="low-sugar" type="radio"> Low Sugar <br>
-            <input class="health-check" value="egg-free" type="radio"> Egg Free
+            <input class="health-check" value="egg-free" type="radio"> Egg Free<br>
+            <input type="submit" value="GO!" id="health-check-submit">
           </form>
+
         <p>Diet Restrictions</p>
 
         <form class="diet" action="">
-          <input class="health-check" value="balanced" type="radio"> Balanced Diet <br>
-          <input class="health-check" value="high-protein" type="radio"> High Protien <br>
-          <input class="health-check" value="high-fiber" type="radio"> High Fiber <br>
-          <input class="health-check" value="low-fat" type="radio"> Low Fat <br>
-          <input class="health-check" value="low-carb" type="radio"> Low Carb <br>
-          <input class="health-check" value="low-sodium" type="radio"> Low Sodium
+          <input class="diet-check" value="balanced" type="radio"> Balanced Diet <br>
+          <input class="diet-check" value="high-protein" type="radio"> High Protien <br>
+          <input class="diet-check" value="high-fiber" type="radio"> High Fiber <br>
+          <input class="diet-check" value="low-fat" type="radio"> Low Fat <br>
+          <input class="diet-check" value="low-carb" type="radio"> Low Carb <br>
+          <input class="diet-check" value="low-sodium" type="radio"> Low Sodium
         </form>
-
+        <button id="diet-check-submit">GO!</button>
       </section>
       <!-- end health and diet | start keyword search -->
 
@@ -97,7 +99,7 @@
           <input value="" type="text" placeholder="Add an Ingredient">
           <input value="" type="text" placeholder="Add an Ingredient">
         </form>
-        <button>GO!</button>
+        <button id="keyword-submit">GO!</button>
       </section>
       <!-- end ingredient keyword input -->
 
@@ -147,11 +149,13 @@
     </script>
     <script src="/scripts/models/token.js"></script>
     <script src="/scripts/models/recipe.js"></script>
+    <script src="/scripts/models/userProfile.js"></script>
     <script src="/scripts/controllers/edamamDataController.js"></script>
     <script src="/scripts/controllers/routes.js">
     </script>
     <!-- <script src="/scripts/views/repoView.js"></script> -->
     <!-- <script src="/scripts/views/recipeView.js"></script> -->
-    <script src="/scripts/models/userProfile.js"></script>
+    <script src="/scripts/views/userProfileView.js"></script>
+
   </body>
 </html>
