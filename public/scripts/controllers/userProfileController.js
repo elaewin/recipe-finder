@@ -6,15 +6,15 @@
   // Place UserProfile data into localStorage.
   userProfileController.addUserProfileoLocalStorage = () => {
     if (UserProfile.diet.length > 0) {
-      localStorage.setItem('diet', UserProfile.keyword);
+      localStorage.setItem('diet', JSON.stringify(UserProfile.keyword));
     }
 
     if (UserProfile.health.length > 0) {
-      localStorage.setItem('health', UserProfile.health);
+      localStorage.setItem('health', JSON.stringify(UserProfile.health));
     }
 
     if (UserProfile.keyword.length > 0) {
-      localStorage.setItem('keyword', UserProfile.keyword);
+      localStorage.setItem('keyword', JSON.stringify(UserProfile.keyword));
     }
   }
 

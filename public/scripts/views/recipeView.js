@@ -17,6 +17,7 @@
     return template(context);
   }
 
+// TODO: Not getting called anywhere. 
 // this should replace the .toHTML method and append our recipies to the #recipe article element via Handlebars template.
   recipeView.index = function(recipe) {
     // TODO: fix foo class once index is finished fleshing out
