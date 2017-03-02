@@ -3,7 +3,7 @@
 (function(module) {
   const userProfileView = {};
 
-  userProfileView.index = () => {
+  userProfileView.init = () => {
     // hide all sections in Main
     $('main section').hide();
     // show proper intro message, depending if user is returning user
@@ -28,9 +28,9 @@
         $('.health-and-diet').fadeIn();
       } else if (this.text() === 'NO') {
         $('main section').hide();
-        $('.keyword-prompt')fadeIn();
+        $('.keyword-prompt').fadeIn();
       }
-    })
+    });
   };
 
   // this is all done
@@ -40,8 +40,10 @@
 
   $('#health-check-submit').on('click', function(event) {
     event.preventDefault();
-    $('.health-check:checked').each(function(){
-       UserProfile.health.push($(this).val());
+  });
+
+  $('.health-check:checked').each(function(){
+    UserProfile.health.push($(this).val());
     })
 
   $('#diet-input').submit(function(event){
