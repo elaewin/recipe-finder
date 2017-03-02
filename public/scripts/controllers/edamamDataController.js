@@ -11,12 +11,9 @@
     return `/edamam/search?q=${keywordString}&diet=${dietArr[0]}&health=${healthArr[0]}&from=0&to=5`;
   }
 
-  // TODO parse out HTTP request
+  // invokes API request with user input
   edamamDataController.requestData = function() {
-    let dietArr = ['low-carb'];
-    let healthArr = ['vegan'];
-    let keywordArr = ['chicken', 'basil'];
-    $.get(getHTTPRequestString(dietArr, healthArr, keywordArr)) // TODO: place concatenated HTTP request here
+    $.get(getHTTPRequestString(UserProfile.diet, UserProfile.health, UserProfile.keyword))
     .then(results => {
       edamamDataController.all = results.hits;
       console.log(`Here's the raw JSON data: `);
