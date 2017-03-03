@@ -7,7 +7,7 @@
     // hide all sections in Main
     $('main section').hide();
     // show proper intro message, depending if user is returning user
-    if (userProfileController.checkLocalStorage()) {
+    if (localStorage.recipeData) {
       $('.returning-visit').fadeIn();
       $('button .returning-visit').on('click', function(){
         console.log('returning visit button clicked');
@@ -23,13 +23,26 @@
       });
     } else {
       console.log('local storage was empty');
-      $('.first-visit .health-and-diet-prompt').fadeIn();
+      $('.first-visit, .health-and-diet-prompt').fadeIn();
     }
-    $('button .health-and-diet-prompt').on('click', function(){
-      if (this.text() === 'YES') {
+    $('.health-and-diet-prompt button').on('click', function(){
+      console.log($(this));
+      if ($(this).text() === 'YES') {
+        console.log('YES was clicked');
         $('main section').hide();
-        $('.health-and-diet').fadeIn();
-      } else if (this.text() === 'NO') {
+        $('.health-restrictions').fadeIn();
+        $('#health-check-submit').on('click', function(event) {
+            event.preventDefault();
+            $('.health-check:checked').each(function(){
+              UserProfile.health.push($(this).val());
+              })
+            userProfileController.addUserProfileToLocalStorage();
+            $('main section').hide();
+            $('.diet-restrictions').fadeIn();
+          });
+
+
+      } else if ($(this).text() === 'NO') {
         $('main section').hide();
         $('.keyword-prompt').fadeIn();
       }
@@ -37,17 +50,17 @@
   };
 
   // this is all done
-  $('#health-input').submit(function(event){
-    event.preventDefault();
-  });
-
-  $('#health-check-submit').on('click', function(event) {
-    event.preventDefault();
-  });
-
-  $('.health-check:checked').each(function(){
-    UserProfile.health.push($(this).val());
-    })
+  // $('#health-input').submit(function(event){
+  //   event.preventDefault();
+  // });
+  //
+  // $('#health-check-submit').on('click', function(event) {
+  //   event.preventDefault();
+  // });
+  //
+  // $('.health-check:checked').each(function(){
+  //   UserProfile.health.push($(this).val());
+  //   })
 
   $('#diet-input').submit(function(event){
     event.preventDefault();
