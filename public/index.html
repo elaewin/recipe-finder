@@ -46,8 +46,8 @@
 
       <section class="health-and-diet-prompt">
         <p>Do you have any health or dietary restrictions?</p>
-        <button>YES</button>
-        <button>NO</button>
+        <button id="yes-button">YES</button>
+        <button id="no-button">NO</button>
       </section>
 
       <section class="health-restrictions">
@@ -105,12 +105,6 @@
 
       <section id="recipe">
         <article id="recipe-article">
-          <!-- This is where our recipes will be. -->
-          <!-- <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" /> -->
         </article>
       </section>
       <!-- end recipeView -->
@@ -169,19 +163,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js">
 
     </script>
-    <!-- <script src="/scripts/models/token.js"></script> -->
     <script src="/scripts/models/recipe.js"></script>
     <script src="/scripts/models/userProfile.js"></script>
 
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/userProfileController.js"></script>
+    <script src="/scripts/views/userProfileView.js"></script>
     <script src="/scripts/controllers/edamamDataController.js"></script>
     <script src="/scripts/controllers/recipeController.js"></script>
 
     <script src="/scripts/views/recipeView.js"></script>
     <script src="/scripts/views/userProfileView.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
-    <!-- <script src="/scripts/views/aboutView.js"></script> -->
 
   </body>
 </html>

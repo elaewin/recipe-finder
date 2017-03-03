@@ -16,14 +16,14 @@
     $.get(getHTTPRequestString(UserProfile.diet, UserProfile.health, UserProfile.keyword))
     .then(results => {
       edamamDataController.all = results.hits;
-      console.log(`Here's the raw JSON data:`);
+      console.log(`Here's the raw JSON data:`, results);
       console.log(edamamDataController.all);
     },
       err => {
         console.error('status code: ' + err.status);
-      });
+      }).then(Recipe.loadAll);
   }
-  edamamDataController.requestData();
+  // edamamDataController.requestData();
 
   module.edamamDataController = edamamDataController;
 })(window);

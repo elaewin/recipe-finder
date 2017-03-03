@@ -14,7 +14,7 @@
     }
 
     if (UserProfile.keyword.length > 0) {
-      localStorage.setItem('keyword', JSON.stringify(UserProfile.keyword[0]));
+      localStorage.setItem('keyword', JSON.stringify(UserProfile.keyword));
     }
   }
 

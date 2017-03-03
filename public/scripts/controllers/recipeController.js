@@ -12,5 +12,9 @@
     return false;
   }
 
+  recipeController.loadAll = function(){
+    console.log('Inside recipeController.loadAll');
+  }
+
   module.recipeController = recipeController;
 })(window)

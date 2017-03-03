@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/edamam/*', proxyEdamam);
 
-app.get('*', function(request, response) {
+app.get('/', function(request, response) {
   response.sendFile('index.html', {root: './public'});
 });
 
