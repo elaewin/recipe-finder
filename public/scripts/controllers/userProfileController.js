@@ -4,17 +4,17 @@
   const userProfileController = {};
 
   // Place UserProfile data into localStorage.
-  userProfileController.addUserProfileoLocalStorage = () => {
+  userProfileController.addUserProfileToLocalStorage = () => {
     if (UserProfile.diet.length > 0) {
-      localStorage.setItem('diet', JSON.stringify(UserProfile.keyword));
+      localStorage.setItem('diet', JSON.stringify(UserProfile.diet[0]));
     }
 
     if (UserProfile.health.length > 0) {
-      localStorage.setItem('health', JSON.stringify(UserProfile.health));
+      localStorage.setItem('health', JSON.stringify(UserProfile.health[0]));
     }
 
     if (UserProfile.keyword.length > 0) {
-      localStorage.setItem('keyword', JSON.stringify(UserProfile.keyword));
+      localStorage.setItem('keyword', JSON.stringify(UserProfile.keyword[0]));
     }
   }
 
