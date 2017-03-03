@@ -10,18 +10,19 @@
     // show proper intro message, depending if user is returning user
     if (localStorage.keyword) {
       $('.returning-visit').fadeIn();
-      $('button .returning-visit').on('click', function(){
-        console.log('returning visit button clicked: ', this.text);
-        if (this.text() === 'YES') {
-          $('main section').hide();
-          $('.keyword-prompt').fadeIn();
-          // skip the health and diet prompt and go to the keyword prompt.
-        } else if (this.text() === 'NO') {
-            console.log('clear localStorage button clicked: ', this.text);
-          $('main section').hide();
-          $('.health-and-diet-prompt').fadeIn();
-        }
+      $('#return-yes').on('click', function(){
+        console.log('user indicated returning visit to use local storage');
+        $('main section').hide();
+        $('.keyword-prompt').fadeIn();
       });
+          // skip the health and diet prompt and go to the keyword prompt.
+      $('#return-no').on('click', function(){
+        console.log('clear localStorage button clicked: ', this.text);
+        localStorage.clear();
+        $('main section').hide();
+        $('.health-and-diet-prompt').fadeIn();
+      });
+
     } else {
     console.log('local storage was empty');
     $('.first-visit, .health-and-diet-prompt').fadeIn();
