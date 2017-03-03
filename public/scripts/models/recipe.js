@@ -16,14 +16,22 @@ Recipe.loadAll = () => {
   console.log(Recipe.all);
 };
 
-  Recipe.fetchAll = callback => {
-  // //TODO: fix foo data here
+Recipe.fetchAll = callback => {
+  if (localStorage.recipeData) {
+    Recipe.all = JSON.parse(localStorage.getItem('recipeData'));
+    callback(Recipe.all);
+  } else {
+    Recipe.loadAll();
+    localStorage.setItem('recipeData', JSON.stringify(Recipe.all));
+  };
+
+  //TODO: fix foo data here
   //   $.get('/foo')
   //   .then(
   //     results => {
   //       if (results.length) {
   //         Recipe.loadAll();
-  //         localStorage.rawData.push(results);
+  //         localStorage.Data.push(results);
   //         callback();
   //       } else {
   // // TODO: fix this fall-back after we decide on a behaviour for this
@@ -37,7 +45,7 @@ Recipe.loadAll = () => {
   //         .catch(console.error);
   //       }
   //     }
-  //   )
+    // )
     // input : JSON data,
     //    currentUserProfile compared to  previousUserProfile
     //    currentRecipe compared to previousRecipe
