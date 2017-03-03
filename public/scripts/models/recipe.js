@@ -17,6 +17,7 @@ Recipe.loadAll = () => {
 };
 
   Recipe.fetchAll = callback => {
+    $.get('/edamam')
   // //TODO: fix foo data here
   //   $.get('/foo')
   //   .then(
