@@ -10,18 +10,14 @@
     let keywordString = '';
     keywordArr.forEach(keyword => {keywordString += keyword + '+';});
     searchString += keywordString;
-    console.log('added keywords', searchString);
-    if (dietArr.length) {
+    if (dietArr.length && dietArr[0] !== '') {
       let dietString = `&diet=${dietArr[0]}`;
       searchString += dietString;
-      console.log('added diet', searchString);
     }
-    if (healthArr.length) {
+    if (healthArr.length && healthArr[0] !== '') {
       let healthString = `&health=${healthArr[0]}`;
       searchString += healthString;
-      console.log('added health', searchString);
     }
-    console.log('full string:', searchString);
     return searchString;
   }
 
