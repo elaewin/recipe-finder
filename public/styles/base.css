@@ -2,7 +2,7 @@ body {
   color: #ffaf70;
   background: #141414;
   font-family: "Open Sans";
-  font-size: 1em;
+  font-size: 3vmax;
 }
 
 h1 {
@@ -13,13 +13,12 @@ h1 {
 a:link {
   color: #ff7f50
   }
-
 a:visited {
-
+  color: #F08080
   }
 a:hover {
-
+  color: #ADFF2F;
 }
 a:active {
-
+  color: #ADFF2F;
 }
