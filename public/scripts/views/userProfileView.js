@@ -29,13 +29,16 @@
     };
   };
 
-  $('.health-and-diet-prompt button').on('click', function() {
-    console.log($(this));
-    if ($(this).text() === 'YES') {
-      console.log('YES was clicked');
-      $('main section').hide();
-      $('.health-restrictions').fadeIn();
-    }
+  $('#yes-button').on('click', function() {
+    console.log('YES was clicked');
+    $('main section').hide();
+    $('.health-restrictions').fadeIn();
+  });
+
+  $('#no-button').on('click', function() {
+    console.log('NO was clicked');
+    $('main section').hide();
+    $('.health-restrictions').fadeIn();
   });
 
   $('#health-check-submit').on('click', function(event) {
