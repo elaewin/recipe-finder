@@ -4,7 +4,7 @@
   const userProfileController = {};
 
   // Place UserProfile data into localStorage.
-  userProfileController.addUserProfileoLocalStorage = () => {
+  userProfileController.addUserProfileToLocalStorage = () => {
     if (UserProfile.diet.length > 0) {
       localStorage.setItem('diet', UserProfile.keyword);
     }
