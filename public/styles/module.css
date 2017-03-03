@@ -1,7 +1,9 @@
 /*Between 768px & 959px wide*/
 @media only screen and (min-width: 768px) {
+  body {
+    font-size: 2vmax;
+  }
   .profile-pic-container {
-    /*display: inline-block;*/
     width: 20vmax;
     height: 20vmax;
   }
@@ -31,6 +33,7 @@
     width: calc(100vw - 25vmax);
     height: 20vmax;
     display: table;
+    font-size: 2vmax;
   }
 
   .about-text p {
@@ -47,8 +50,11 @@
 
 /*Bigger than 959px wide*/
 @media only screen and (min-width: 960px) {
+  body {
+    font-size: 1.25vmax;
+  }
+
   .profile-pic-container {
-    /*display: inline-block;*/
     width: 20vmax;
     height: 20vmax;
   }
@@ -84,6 +90,7 @@
     width: calc(100vw - 25vmax);
     height: 20vmax;
     display: table;
+    font-size: 1.25vmax;
   }
 
   .about-text p {

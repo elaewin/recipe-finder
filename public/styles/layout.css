@@ -18,7 +18,9 @@ footer {
     right: 0;
 }
 
-button {
+button,
+#diet-check-submit,
+#health-check-submit {
   color: #141414;
 }
 
@@ -57,16 +59,14 @@ button {
 .attributions {
   height: 96%;
   position: absolute;
-    top: 2%;
-    bottom: 2%;
+    top: 0%;
+    bottom: 5%;
     left: 2%;
-  font-size: 1.25vmax;
+  font-size: 1.5vmax;
   padding: 0;
-  /*margin-bottom: 2vmin;*/
 }
 
 .about-text {
   width: 80vw;
   margin: auto;
-  font-size: 1.25vmax;
 }
