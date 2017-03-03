@@ -3,7 +3,7 @@ header {
 }
 
 main {
-  padding: 2vmin 2vmin 20vmax 2vmin;
+  padding: 2vmin 2vmin 20vmin 2vmin;
 }
 
 footer {
@@ -55,14 +55,18 @@ button {
 }
 
 .attributions {
-  /*height: 90%;*/
-  float: left;
-  font-size: 2vw;
+  height: 96%;
+  position: absolute;
+    top: 2%;
+    bottom: 2%;
+    left: 2%;
+  font-size: 1.25vmax;
   padding: 0;
-  margin-bottom: 2vmin;
+  /*margin-bottom: 2vmin;*/
 }
 
 .about-text {
   width: 80vw;
   margin: auto;
+  font-size: 1.25vmax;
 }

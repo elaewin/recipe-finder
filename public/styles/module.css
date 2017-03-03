@@ -1,9 +1,14 @@
 /*Between 768px & 959px wide*/
 @media only screen and (min-width: 768px) {
   .profile-pic-container {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 20vmax;
     height: 20vmax;
+  }
+
+  .clearfix {
+    overflow: auto;
+    zoom: 1;
   }
 
   .attributions {
@@ -42,6 +47,17 @@
 
 /*Bigger than 959px wide*/
 @media only screen and (min-width: 960px) {
+  .profile-pic-container {
+    /*display: inline-block;*/
+    width: 20vmax;
+    height: 20vmax;
+  }
+
+  .clearfix {
+    overflow: auto;
+    zoom: 1;
+  }
+
   footer {
     max-height: 2vmin;
     min-height: 1.5vmax;
