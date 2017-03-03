@@ -6,9 +6,23 @@
 
   // returns an HTTP request strings based on diet, health, and keyword arrays
   function getHTTPRequestString(dietArr, healthArr, keywordArr) {
-    var keywordString = '';
+    let searchString = '/edamam/search?q=';
+    let keywordString = '';
     keywordArr.forEach(keyword => {keywordString += keyword + '+';});
-    return `/edamam/search?q=${keywordString}&diet=${dietArr[0]}&health=${healthArr[0]}&from=0&to=5`;
+    searchString += keywordString;
+    console.log('added keywords', searchString);
+    if (dietArr.length) {
+      let dietString = `&diet=${dietArr[0]}`;
+      searchString += dietString;
+      console.log('added diet', searchString);
+    }
+    if (healthArr.length) {
+      let healthString = `&health=${healthArr[0]}`;
+      searchString += healthString;
+      console.log('added health', searchString);
+    }
+    console.log('full string:', searchString);
+    return searchString;
   }
 
   // invokes API request with user input
