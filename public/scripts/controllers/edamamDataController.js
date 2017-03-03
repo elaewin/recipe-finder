@@ -21,7 +21,7 @@
     },
       err => {
         console.error('status code: ' + err.status);
-      }).then(Recipe.loadAll);
+      }).then(Recipe.loadAll).then(page('/recipe'));
   }
   // edamamDataController.requestData();
 
