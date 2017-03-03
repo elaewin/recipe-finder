@@ -36,10 +36,20 @@
             $('.health-check:checked').each(function(){
               UserProfile.health.push($(this).val());
               })
-            userProfileController.addUserProfileToLocalStorage();
+            // userProfileController.addUserProfileToLocalStorage();
             $('main section').hide();
             $('.diet-restrictions').fadeIn();
-          });
+            $('#diet-input').submit(function(event){
+              event.preventDefault();
+              $('#diet-check-submit').on('click', function(event) {
+                event.preventDefault();
+                $('.diet-check:checked').each(function(){
+                  UserProfile.diet.push($(this).val());
+            })
+            userProfileController.addUserProfileToLocalStorage();
+          })
+        });
+      });
 
 
       } else if ($(this).text() === 'NO') {
@@ -48,30 +58,6 @@
       }
     });
   };
-
-  // this is all done
-  // $('#health-input').submit(function(event){
-  //   event.preventDefault();
-  // });
-  //
-  // $('#health-check-submit').on('click', function(event) {
-  //   event.preventDefault();
-  // });
-  //
-  // $('.health-check:checked').each(function(){
-  //   UserProfile.health.push($(this).val());
-  //   })
-
-  $('#diet-input').submit(function(event){
-    event.preventDefault();
-  });
-
-  $('#diet-check-submit').on('click', function(event) {
-    event.preventDefault();
-    $('.diet-check:checked').each(function(){
-       UserProfile.diet.push($(this).val());
-    })
-  });
 
   $('#keyword-input').submit(function(event){
     event.preventDefault();
