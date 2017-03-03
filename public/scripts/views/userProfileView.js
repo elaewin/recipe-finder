@@ -23,67 +23,66 @@
         }
       });
     } else {
-      console.log('local storage was empty');
-      $('.first-visit, .health-and-diet-prompt').fadeIn();
+    console.log('local storage was empty');
+    $('.first-visit, .health-and-diet-prompt').fadeIn();
     };
   };
-    $('.health-and-diet-prompt button').on('click', function() {
-      console.log($(this));
-      if ($(this).text() === 'YES') {
-        console.log('YES was clicked');
-        $('main section').hide();
-        $('.health-restrictions').fadeIn();
-        $('#health-check-submit').on('click', function(event) {
-            event.preventDefault();
-            $('.health-check:checked').each(function(){
-              UserProfile.health.push($(this).val());
-              })
-            userProfileController.addUserProfileToLocalStorage();
-            $('main section').hide();
-            $('.diet-restrictions').fadeIn();
-            $('#diet-input').submit(function(event){
-              event.preventDefault();
-              $('#diet-check-submit').on('click', function(event) {
-                event.preventDefault();
-                $('.diet-check:checked').each(function(){
-                  UserProfile.diet.push($(this).val());
-            })
-            userProfileController.addUserProfileToLocalStorage();
-          })
-        });
-      });
-    };
+
+  $('.health-and-diet-prompt button').on('click', function() {
+    console.log($(this));
+    if ($(this).text() === 'YES') {
+      console.log('YES was clicked');
+      $('main section').hide();
+      $('.health-restrictions').fadeIn();
+    }
   });
 
-     $('#diet-check-submit').on('click', function(event) {
-       event.preventDefault();
-       $('.diet-check:checked').each(function() {
-         UserProfile.diet = [];
-         UserProfile.diet.push($(this).val());
-       });
-       $('main section').hide();
-       $('.keyword-prompt').fadeIn();
-     });
-
-    $('#keyword-submit').on('click', function(event) {
+  $('#health-check-submit').on('click', function(event) {
+    event.preventDefault();
+    $('.health-check:checked').each(function(){
+      UserProfile.health.push($(this).val());
+      })
+    // userProfileController.addUserProfileToLocalStorage();
+    $('main section').hide();
+    $('.diet-restrictions').fadeIn();
+    $('#diet-input').submit(function(event){
       event.preventDefault();
-      $('.keyword-entry').each(function() {
-        if($(this).val().length) {
-          // UserProfile.keyword = [];
-         console.log(UserProfile.keyword);
-         UserProfile.keyword.push($(this).val());
-         console.log(UserProfile.keyword);
-        }
-      });
-      userProfileController.addUserProfileToLocalStorage();
-      edamamDataController.requestData();
-      console.log('allrecipies: ', Recipe.all);
     });
+  });
+
+  // $('#diet-check-submit').on('click', function(event) {
+  //   event.preventDefault();
+  //   $('.diet-check:checked').each(function(){
+  //     UserProfile.diet.push($(this).val());
+  // });
+
+  $('#diet-check-submit').on('click', function(event) {
+    event.preventDefault();
+    $('.diet-check:checked').each(function() {
+      UserProfile.diet = [];
+      UserProfile.diet.push($(this).val());
+    });
+    $('main section').hide();
+    $('.keyword-prompt').fadeIn();
+  });
+
+  $('#keyword-submit').on('click', function(event) {
+    event.preventDefault();
+    $('.keyword-entry').each(function() {
+      if($(this).val().length) {
+        // UserProfile.keyword = [];
+       console.log(UserProfile.keyword);
+       UserProfile.keyword.push($(this).val());
+       console.log(UserProfile.keyword);
+      }
+    });
+    userProfileController.addUserProfileToLocalStorage();
+    edamamDataController.requestData();
+  });
 
   $('#keyword-input').submit(function(event){
     event.preventDefault();
   });
-
 
   module.userProfileView = userProfileView;
 })(window);

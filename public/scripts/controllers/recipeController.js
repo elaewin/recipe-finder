@@ -15,7 +15,6 @@
   recipeController.renderAll = function(){
     console.log('Inside recipeController.renderAll');
     recipeView.index(Recipe.all);
-    // Recipe.all.forEach(recipe => recipeView.render(recipe));
   }
 
   module.recipeController = recipeController;
