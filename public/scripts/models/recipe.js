@@ -16,47 +16,15 @@ Recipe.loadAll = () => {
   console.log(Recipe.all);
 };
 
-  Recipe.fetchAll = callback => {
-    $.get('/edamam')
-  // //TODO: fix foo data here
-  //   $.get('/foo')
-  //   .then(
-  //     results => {
-  //       if (results.length) {
-  //         Recipe.loadAll();
-  //         localStorage.rawData.push(results);
-  //         callback();
-  //       } else {
-  // // TODO: fix this fall-back after we decide on a behaviour for this
-  //         $.getJSON(localStorage.rawData)
-  //         .then(rawData => {
-  //           rawData.forEach(item => {
-  //             let recipe = new Recipe(item);
-  //             Recipe.all.push(JSON.parse(recipe));
-  //           })
-  //         .then(() => Recipe.fetchAll(callback))
-  //         .catch(console.error);
-  //       }
-  //     }
-  //   )
-    // input : JSON data,
-    //    currentUserProfile compared to  previousUserProfile
-    //    currentRecipe compared to previousRecipe
-    // output: recipe.all - it pushes recipe objects into "all"
-    //   localStorage.previousRecipe - will serve as a comparison objects, set to current at end
-    //   localStorage.currentRecipes - will be built from the API reponse / previousRecipe
-    //   localStorage.previousUserProfile - will be set to currentUserProfile at end.
 
-
-    if (localStorage.previousUserProfile) {
-      // ask user if they want to use it or not
-      // store user response in a variable
-    } else {
-      // build a currentUserProfile
-    }
-
+Recipe.fetchAll = callback => {
+  if (localStorage.recipeData) {
+    Recipe.all = JSON.parse(localStorage.getItem('recipeData'));
+    callback(Recipe.all);
+  } else {
+    Recipe.loadAll();
+    localStorage.setItem('recipeData', JSON.stringify(Recipe.all));
   };
-
 
   module.Recipe = Recipe;
 })(window);
