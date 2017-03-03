@@ -7,7 +7,7 @@
     // hide all sections in Main
     $('main section').hide();
     // show proper intro message, depending if user is returning user
-    if (localStorage.recipeData) {
+    if (localStorage.keyword) {
       $('.returning-visit').fadeIn();
       $('button .returning-visit').on('click', function(){
         console.log('returning visit button clicked');
@@ -25,66 +25,61 @@
       console.log('local storage was empty');
       $('.first-visit, .health-and-diet-prompt').fadeIn();
     }
-    $('.health-and-diet-prompt button').on('click', function(){
+    $('.health-and-diet-prompt button').on('click', function() {
       console.log($(this));
       if ($(this).text() === 'YES') {
         console.log('YES was clicked');
         $('main section').hide();
         $('.health-restrictions').fadeIn();
-        $('#health-check-submit').on('click', function(event) {
-            event.preventDefault();
-            $('.health-check:checked').each(function(){
-              UserProfile.health.push($(this).val());
-              })
-            userProfileController.addUserProfileToLocalStorage();
-            $('main section').hide();
-            $('.diet-restrictions').fadeIn();
-          });
-
-
-      } else if ($(this).text() === 'NO') {
-        $('main section').hide();
-        $('.keyword-prompt').fadeIn();
       }
     });
-  };
 
-  // this is all done
-  // $('#health-input').submit(function(event){
-  //   event.preventDefault();
-  // });
-  //
-  // $('#health-check-submit').on('click', function(event) {
-  //   event.preventDefault();
-  // });
-  //
-  // $('.health-check:checked').each(function(){
-  //   UserProfile.health.push($(this).val());
-  //   })
+    // console.log(UserProfile.health);
+    $('#health-input').on('submit', function(event) {
+        event.preventDefault();
 
-  $('#diet-input').submit(function(event){
-    event.preventDefault();
+
+        $('.health-check').each(function() {
+          // console.log('outside of if', this.checked);
+          if (this.checked) {
+            UserProfile.health = [];
+            // console.log('before push', UserProfile.health);
+            UserProfile.health.push($(this).val());
+            $('main section').hide();
+            $('.diet-restrictions').fadeIn();
+            // console.log('after push', UserProfile.health);
+          }
+        })
+     })
+
+
+     $('#diet-check-submit').on('click', function(event) {
+       event.preventDefault();
+       $('.diet-check:checked').each(function(){
+         UserProfile.diet = [];
+         UserProfile.diet.push($(this).val());
+       })
+       $('main section').hide();
+       $('.keyword-prompt').fadeIn();
+    $('#keyword-submit').on('click', function(event) {
+      event.preventDefault();
+      $('.keyword-entry').each(function() {
+        if($(this).val().length) {
+          // UserProfile.keyword = [];
+         console.log(UserProfile.keyword);
+         UserProfile.keyword.push($(this).val());
+         console.log(UserProfile.keyword);
+         
+        }
+      });
+      userProfileController.addUserProfileToLocalStorage();
+    });
   });
+ }
 
-  $('#diet-check-submit').on('click', function(event) {
-    event.preventDefault();
-    $('.diet-check:checked').each(function(){
-       UserProfile.diet.push($(this).val());
-    })
-  });
 
-  $('#keyword-input').submit(function(event){
-    event.preventDefault();
-  });
 
-  $('#keyword-submit').on('click', function(event) {
-    event.preventDefault();
-    $('.keyword-entry').each(function(){
-      if($(this).val().length) {
-          UserProfile.keyword.push($(this).val());
-      }
-    })
-  });
+
 
   module.userProfileView = userProfileView;
 })(window);
