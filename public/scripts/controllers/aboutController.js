@@ -1,16 +1,12 @@
 'use strict';
 
 (function(module) {
+  const aboutController = {};
 
-const aboutController = {};
-
-  aboutController.init = function() {
-    // hide all sections, replace "class-hide" with whatever class will hide the tags
+  aboutController.init = () => {
     $('main section').hide();
-    //reveal specific section with the id="about-us-view"
-    $('#about-us-view').show();
+    $('.about-us-view').fadeIn();
   }
 
   module.aboutController = aboutController;
-
 })(window)
