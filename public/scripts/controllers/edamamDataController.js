@@ -21,9 +21,12 @@
     },
       err => {
         console.error('status code: ' + err.status);
-      });
+      }).then(function(){
+        console.log('Recipe.all: ', Recipe.all);
+      Recipe.loadAll();
+      recipeView.index(Recipe.all);
+    });
   }
-  edamamDataController.requestData();
 
   module.edamamDataController = edamamDataController;
 })(window);

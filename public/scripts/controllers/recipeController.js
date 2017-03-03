@@ -12,5 +12,10 @@
     return false;
   }
 
+  recipeController.renderAll = function(){
+    console.log('Inside recipeController.renderAll');
+    recipeView.index(Recipe.all);
+  }
+
   module.recipeController = recipeController;
 })(window)

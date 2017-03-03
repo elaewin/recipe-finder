@@ -17,8 +17,8 @@
 
     <!-- TODO: get handlebars setup -->
     <script id="recipe-template" type="text/x-handlebars-template">
-      <h2>{{label}}<a href="{{html_url}}"></a></h2>
-      <img src="{{image_url}}"></img>
+      <h2><a href="{{url}}">{{label}}</a></h2>
+      <img src="{{image}}"></img>
     </script>
     <script id="user-preferences" type="text/x-handlebars-template">
       <!-- <ul> -->
@@ -38,8 +38,8 @@
 
       <section class="returning-visit">
         <p>Welcome back! Would you like to use your existing preferences?</p>
-        <button>YES</button>
-        <button>NO</button>
+        <button id="return-yes">YES</button>
+        <button id="return-no">NO</button>
       </section>
 
       <!-- end intro section | start health and diet -->
@@ -168,14 +168,12 @@
 
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/userProfileController.js"></script>
-    <script src="/scripts/views/userProfileView.js"></script>
     <script src="/scripts/controllers/edamamDataController.js"></script>
     <script src="/scripts/controllers/recipeController.js"></script>
 
     <script src="/scripts/views/recipeView.js"></script>
     <script src="/scripts/views/userProfileView.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
-
 
   </body>
 </html>

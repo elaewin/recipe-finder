@@ -12,8 +12,8 @@
 Recipe.all = [];
 
 Recipe.loadAll = () => {
+  console.log('this is edemamDataController.all logged from Recipe.loadAll:', edamamDataController.all);
   Recipe.all = edamamDataController.all.map(ele => new Recipe(ele));
-  console.log(Recipe.all);
 };
 
 
@@ -24,7 +24,8 @@ Recipe.fetchAll = callback => {
   } else {
     Recipe.loadAll();
     localStorage.setItem('recipeData', JSON.stringify(Recipe.all));
-  };
+  }
+};
 
   module.Recipe = Recipe;
 })(window);
