@@ -23,13 +23,11 @@ button {
 }
 
 .profile-pic-container {
-  /*border-radius: 100%;*/
   width: 80vw;
   height: 80vw;
   margin: auto;
   background-color: white;
   overflow: hidden;
-
 }
 
 .profile-pic {
@@ -57,8 +55,18 @@ button {
 }
 
 .attributions {
-  float: left;
-  font-size: 2vw;
+  height: 96%;
+  position: absolute;
+    top: 2%;
+    bottom: 2%;
+    left: 2%;
+  font-size: 1.25vmax;
   padding: 0;
-  margin-bottom: 2vmin;
+  /*margin-bottom: 2vmin;*/
+}
+
+.about-text {
+  width: 80vw;
+  margin: auto;
+  font-size: 1.25vmax;
 }
