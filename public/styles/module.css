@@ -1,6 +1,5 @@
 /*Between 768px & 959px wide*/
 @media only screen and (min-width: 768px) {
-
   .profile-pic-container {
     display: inline-block;
     width: 20vmax;
@@ -21,6 +20,17 @@
   .pull-right {
     float: right;
     text-align: right;
+  }
+
+  .about-text {
+    width: calc(100vw - 25vmax);
+    height: 20vmax;
+    display: table;
+  }
+
+  .about-text p {
+    display: table-cell;
+    vertical-align: middle;
   }
 
   footer {
