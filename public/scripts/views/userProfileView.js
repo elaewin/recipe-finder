@@ -31,31 +31,29 @@
         console.log('YES was clicked');
         $('main section').hide();
         $('.health-restrictions').fadeIn();
-      }
-    });
-
-    // console.log(UserProfile.health);
-    $('#health-input').on('submit', function(event) {
-        event.preventDefault();
-
-
-        $('.health-check').each(function() {
-          // console.log('outside of if', this.checked);
-          if (this.checked) {
-            UserProfile.health = [];
-            // console.log('before push', UserProfile.health);
-            UserProfile.health.push($(this).val());
+        $('#health-check-submit').on('click', function(event) {
+            event.preventDefault();
+            $('.health-check:checked').each(function(){
+              UserProfile.health.push($(this).val());
+              })
+            // userProfileController.addUserProfileToLocalStorage();
             $('main section').hide();
             $('.diet-restrictions').fadeIn();
-            // console.log('after push', UserProfile.health);
-          }
-        })
-     })
-
+            $('#diet-input').submit(function(event){
+              event.preventDefault();
+              $('#diet-check-submit').on('click', function(event) {
+                event.preventDefault();
+                $('.diet-check:checked').each(function(){
+                  UserProfile.diet.push($(this).val());
+            })
+            userProfileController.addUserProfileToLocalStorage();
+          })
+        });
+      });
 
      $('#diet-check-submit').on('click', function(event) {
        event.preventDefault();
-       $('.diet-check:checked').each(function(){
+       $('.diet-check:checked').each(function() {
          UserProfile.diet = [];
          UserProfile.diet.push($(this).val());
        })
@@ -69,17 +67,17 @@
          console.log(UserProfile.keyword);
          UserProfile.keyword.push($(this).val());
          console.log(UserProfile.keyword);
-         
+
         }
       });
       userProfileController.addUserProfileToLocalStorage();
     });
   });
- }
 
-
-
-
+  $('#keyword-input').submit(function(event){
+    event.preventDefault();
+  });
+}
 
   module.userProfileView = userProfileView;
 })(window);

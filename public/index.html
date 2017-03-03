@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/module.css">
-    <link rel="icon" type="image/x-icon" href="resources/plate-fork-and-knife.png">
+    <link rel="icon" type="image/x-icon" href="/resources/plate-fork-and-knife.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 
@@ -68,7 +68,8 @@
             <input name="health-radio" class="health-check" value="fat-free" type="radio"> Fat Free <br>
             <input name="health-radio" class="health-check" value="low-sugar" type="radio"> Low Sugar <br>
             <input name="health-radio" class="health-check" value="egg-free" type="radio"> Egg Free<br>
-            <input type="submit" value="GO!" id="health-submit">
+            <input name="health-radio" class="health-check" value="" type="radio"> None<br>
+            <input type="submit" value="GO!" id="health-check-submit">
           </form>
       </section>
 
@@ -76,11 +77,12 @@
         <p>Diet Restrictions</p>
         <form id="diet-input" action="">
           <input name="diet-radio" class="diet-check" value="balanced" type="radio"> Balanced Diet <br>
-          <input name="diet-radio" class="diet-check" value="high-protein" type="radio"> High Protien <br>
+          <input name="diet-radio" class="diet-check" value="high-protein" type="radio"> High Protein <br>
           <input name="diet-radio" class="diet-check" value="high-fiber" type="radio"> High Fiber <br>
           <input name="diet-radio" class="diet-check" value="low-fat" type="radio"> Low Fat <br>
           <input name="diet-radio" class="diet-check" value="low-carb" type="radio"> Low Carb <br>
           <input name="diet-radio" class="diet-check" value="low-sodium" type="radio"> Low Sodium <br>
+          <input name="diet-radio" class="diet-check" value="" type="radio"> None <br>
           <input type="submit" value="GO!" id="diet-check-submit">
         </form>
       </section>
@@ -104,47 +106,63 @@
       <section id="recipe">
         <article id="recipe-article">
           <!-- This is where our recipes will be. -->
+          <!-- <img src="http://placehold.it/350x150" alt="" />
           <img src="http://placehold.it/350x150" alt="" />
           <img src="http://placehold.it/350x150" alt="" />
           <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" />
-          <img src="http://placehold.it/350x150" alt="" />
+          <img src="http://placehold.it/350x150" alt="" /> -->
         </article>
       </section>
       <!-- end recipeView -->
 
       <!-- start aboutView -->
-      <section class="about-us-view">
-        <div class="profile-pic-container">
+      <section class="about-us-view clearfix">
+
+        <div class="profile-pic-container pull-left">
           <img class="profile-pic" id="first-pic" src="/resources/DavidW.jpg" alt="David Wheeler">
         </div>
-        <p class="about-text">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
-        <div class="profile-pic-container">
+        <div class="about-text pull-right">
+          <p>Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
+        </div>
+
+        <div class="profile-pic-container pull-right">
           <img class="profile-pic" id="second-pic" src="/resources/DisaDots.jpg" alt="Disa Marnesdottr">
         </div>
-        <p class="about-text">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
-        <div class="profile-pic-container">
+        <div class="about-text pull-left">
+          <p>Geek. Mom. Interested in everything. Currently studying accessible web design at Code Fellows.</p>
+        </div>
 
+
+        <div class="profile-pic-container pull-left">
           <img class="profile-pic" id="third-pic" src="/resources/miguel.png" alt="Miguel Pena">
         </div>
-        <p class="about-text">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
-        <div class="profile-pic-container">
+        <div class="about-text pull-right">
+          <p>Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
+        </div>
+
+
+        <div class="profile-pic-container pull-right">
           <img class="profile-pic" id="fourth-pic" src="/resources/ron.png" alt="Ronel Rustia">
         </div>
-        <p class="about-text">Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
+        <div class="about-text pull-left">
+          <p>Test textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest textTest text</p>
+        </div>
+
 
       </section>
     </main>
     <footer>
       <div class="attributions">
-        <p>Favicon and dinnerware icons created by
+        <p>Favicon and dinnerware icons created by<br>
           <a href="http://www.freepik.com/">freepik</a> from
           <a href="http://www.flaticon.com/">FLATICON</a>.
         </p>
       </div>
-      <p></p>
-      <a href="https://www.codefellows.org/"><!--TODO: fix placeholder-->
-      <img id="about-us-link" src="/resources/about-us.png" alt="about us"></a>
+
+      <a href="/about">
+        <img id="about-us-link" src="/resources/about-us.png" alt="about us">
+      </a>
+
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
@@ -157,12 +175,14 @@
 
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/userProfileController.js"></script>
+    <script src="/scripts/views/userProfileView.js"></script>
     <script src="/scripts/controllers/edamamDataController.js"></script>
     <script src="/scripts/controllers/recipeController.js"></script>
 
     <script src="/scripts/views/recipeView.js"></script>
-    <script src="/scripts/views/userProfileView.js"></script>
+    <!-- <script src="/scripts/views/userProfileView.js"></script> -->
     <script src="/scripts/controllers/routes.js"></script>
+    <script src="/scripts/views/aboutView.js"></script>
 
   </body>
 </html>

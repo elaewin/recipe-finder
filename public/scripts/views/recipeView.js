@@ -20,7 +20,6 @@
 // TODO: Not getting called anywhere.
 // this should replace the .toHTML method and append our recipies to the #recipe article element via Handlebars template.
   recipeView.index = function(recipe) {
-    // TODO: fix foo class once index is finished fleshing out
     $('main section').hide(); // hide other div tags which needs to be hidden
     $('#recipe-article').remove();
     recipe.forEach(a => $('#recipe').append(render(a)));
